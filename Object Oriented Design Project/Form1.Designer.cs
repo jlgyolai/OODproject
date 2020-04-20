@@ -43,6 +43,7 @@
             this.textBoxWar.Name = "textBoxWar";
             this.textBoxWar.Size = new System.Drawing.Size(392, 51);
             this.textBoxWar.TabIndex = 0;
+            this.textBoxWar.TabStop = false;
             this.textBoxWar.Text = "WAR";
             this.textBoxWar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxWar.Click += new System.EventHandler(this.textBoxWar_Click);
@@ -57,8 +58,10 @@
             this.textBoxMemory.Name = "textBoxMemory";
             this.textBoxMemory.Size = new System.Drawing.Size(392, 51);
             this.textBoxMemory.TabIndex = 1;
+            this.textBoxMemory.TabStop = false;
             this.textBoxMemory.Text = "Memory Matching";
             this.textBoxMemory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxMemory.Click += new System.EventHandler(this.textBoxMemory_Click);
             this.textBoxMemory.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             this.textBoxMemory.MouseEnter += new System.EventHandler(this.textBoxMemory_MouseEnter);
             this.textBoxMemory.MouseLeave += new System.EventHandler(this.textBoxMemory_MouseLeave);
@@ -71,8 +74,12 @@
             this.textBoxTTT.Name = "textBoxTTT";
             this.textBoxTTT.Size = new System.Drawing.Size(392, 51);
             this.textBoxTTT.TabIndex = 2;
+            this.textBoxTTT.TabStop = false;
             this.textBoxTTT.Text = "Tic-Tac-Toe";
             this.textBoxTTT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTTT.Click += new System.EventHandler(this.textBoxTTT_Click);
+            this.textBoxTTT.MouseEnter += new System.EventHandler(this.textBoxTTT_MouseEnter);
+            this.textBoxTTT.MouseLeave += new System.EventHandler(this.textBoxTTT_MouseLeave);
             // 
             // textBox3
             // 
@@ -83,6 +90,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(679, 44);
             this.textBox3.TabIndex = 3;
+            this.textBox3.TabStop = false;
             this.textBox3.Text = "Choose your game!";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -94,8 +102,12 @@
             this.textBoxExit.Name = "textBoxExit";
             this.textBoxExit.Size = new System.Drawing.Size(392, 51);
             this.textBoxExit.TabIndex = 4;
+            this.textBoxExit.TabStop = false;
             this.textBoxExit.Text = "Exit";
             this.textBoxExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxExit.Click += new System.EventHandler(this.textBoxExit_Click);
+            this.textBoxExit.MouseEnter += new System.EventHandler(this.textBoxExit_MouseEnter);
+            this.textBoxExit.MouseLeave += new System.EventHandler(this.textBoxExit_MouseLeave);
             // 
             // MainMenu
             // 

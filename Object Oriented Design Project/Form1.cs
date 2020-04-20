@@ -36,6 +36,27 @@ namespace Object_Oriented_Design_Project
             newForm.Show();
         }
 
+        private void textBoxMemory_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var newForm = new MemoryCardGame();
+            newForm.FormClosed += (s, args) => this.Close();
+            newForm.Show();
+        }
+
+        private void textBoxTTT_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var newForm = new TicTacToe();
+            newForm.FormClosed += (s, args) => this.Close();
+            newForm.Show();
+        }
+
+        private void textBoxExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void textBoxWar_MouseEnter(object sender, EventArgs e)
         {
             textBoxWar.BackColor = Color.Navy;
@@ -55,5 +76,26 @@ namespace Object_Oriented_Design_Project
         {
             textBoxMemory.BackColor = Color.CornflowerBlue;
         }
+
+        private void textBoxTTT_MouseEnter(object sender, EventArgs e)
+        {
+            textBoxTTT.BackColor = Color.Navy;
+        }
+
+        private void textBoxTTT_MouseLeave(object sender, EventArgs e)
+        {
+            textBoxTTT.BackColor = Color.CornflowerBlue;
+        }
+
+        private void textBoxExit_MouseEnter(object sender, EventArgs e)
+        {
+            textBoxExit.BackColor = Color.Navy;
+        }
+
+        private void textBoxExit_MouseLeave(object sender, EventArgs e)
+        {
+            textBoxExit.BackColor = Color.CornflowerBlue;
+        }
+
     }
 }

@@ -10,29 +10,19 @@ using System.Windows.Forms;
 
 namespace Object_Oriented_Design_Project
 {
-    public partial class War : Form
+    public partial class MemoryCardGame : Form
     {
-        public War()
+        public MemoryCardGame()
         {
             InitializeComponent();
         }
 
-        private void WarExit_Click(object sender, EventArgs e)
+        private void MCGExit_Click(object sender, EventArgs e)
         {
             this.Hide();
             var newForm = new MainMenu();
             newForm.FormClosed += (s, args) => this.Close();
             newForm.Show();
-        }
-
-        private void WarExit_MouseEnter(object sender, EventArgs e)
-        {
-            WarExit.BackColor = Color.Olive;
-        }
-
-        private void WarExit_MouseLeave(object sender, EventArgs e)
-        {
-            WarExit.BackColor = Color.OliveDrab;
         }
     }
 }

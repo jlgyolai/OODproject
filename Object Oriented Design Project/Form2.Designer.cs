@@ -40,6 +40,7 @@
             this.CardsInHand.Name = "CardsInHand";
             this.CardsInHand.Size = new System.Drawing.Size(257, 39);
             this.CardsInHand.TabIndex = 0;
+            this.CardsInHand.TabStop = false;
             this.CardsInHand.Text = "Cards in hand:";
             // 
             // WarExit
@@ -50,8 +51,11 @@
             this.WarExit.Name = "WarExit";
             this.WarExit.Size = new System.Drawing.Size(65, 39);
             this.WarExit.TabIndex = 1;
+            this.WarExit.TabStop = false;
             this.WarExit.Text = "EXIT";
             this.WarExit.Click += new System.EventHandler(this.WarExit_Click);
+            this.WarExit.MouseEnter += new System.EventHandler(this.WarExit_MouseEnter);
+            this.WarExit.MouseLeave += new System.EventHandler(this.WarExit_MouseLeave);
             // 
             // War
             // 
