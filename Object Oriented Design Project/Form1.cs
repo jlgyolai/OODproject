@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Object_Oriented_Design_Project
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
             //check
@@ -23,14 +23,37 @@ namespace Object_Oriented_Design_Project
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void textBoxWar_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            var newForm  = new War();
+            newForm.Closed += (s, args) => this.Close();
+            newForm.Show();
+        }
 
+        private void textBoxWar_MouseEnter(object sender, EventArgs e)
+        {
+            textBoxWar.BackColor = Color.Navy;
+        }
+
+        private void textBoxWar_MouseLeave(object sender, EventArgs e)
+        {
+            textBoxWar.BackColor = Color.CornflowerBlue;
+        }
+
+        private void textBoxMemory_MouseEnter(object sender, EventArgs e)
+        {
+            textBoxMemory.BackColor = Color.Navy;
+        }
+
+        private void textBoxMemory_MouseLeave(object sender, EventArgs e)
+        {
+            textBoxMemory.BackColor = Color.CornflowerBlue;
         }
     }
 }

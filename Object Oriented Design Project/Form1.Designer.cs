@@ -1,6 +1,6 @@
 ﻿namespace Object_Oriented_Design_Project
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.textBoxWar = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxMemory = new System.Windows.Forms.TextBox();
+            this.textBoxTTT = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxExit = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxWar
@@ -45,30 +45,34 @@
             this.textBoxWar.TabIndex = 0;
             this.textBoxWar.Text = "WAR";
             this.textBoxWar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxWar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxWar.Click += new System.EventHandler(this.textBoxWar_Click);
+            this.textBoxWar.MouseEnter += new System.EventHandler(this.textBoxWar_MouseEnter);
+            this.textBoxWar.MouseLeave += new System.EventHandler(this.textBoxWar_MouseLeave);
             // 
-            // textBox1
+            // textBoxMemory
             // 
-            this.textBox1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(205, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(392, 51);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Memory Matching";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.textBoxMemory.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxMemory.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMemory.Location = new System.Drawing.Point(205, 221);
+            this.textBoxMemory.Name = "textBoxMemory";
+            this.textBoxMemory.Size = new System.Drawing.Size(392, 51);
+            this.textBoxMemory.TabIndex = 1;
+            this.textBoxMemory.Text = "Memory Matching";
+            this.textBoxMemory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxMemory.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.textBoxMemory.MouseEnter += new System.EventHandler(this.textBoxMemory_MouseEnter);
+            this.textBoxMemory.MouseLeave += new System.EventHandler(this.textBoxMemory_MouseLeave);
             // 
-            // textBox2
+            // textBoxTTT
             // 
-            this.textBox2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.textBox2.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(205, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(392, 51);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Tic-Tac-Toe";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTTT.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxTTT.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTTT.Location = new System.Drawing.Point(205, 292);
+            this.textBoxTTT.Name = "textBoxTTT";
+            this.textBoxTTT.Size = new System.Drawing.Size(392, 51);
+            this.textBoxTTT.TabIndex = 2;
+            this.textBoxTTT.Text = "Tic-Tac-Toe";
+            this.textBoxTTT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox3
             // 
@@ -82,29 +86,29 @@
             this.textBox3.Text = "Choose your game!";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // textBoxExit
             // 
-            this.textBox4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.textBox4.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(205, 363);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(392, 51);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "Exit";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxExit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxExit.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxExit.Location = new System.Drawing.Point(205, 363);
+            this.textBoxExit.Name = "textBoxExit";
+            this.textBoxExit.Size = new System.Drawing.Size(392, 51);
+            this.textBoxExit.TabIndex = 4;
+            this.textBoxExit.Text = "Exit";
+            this.textBoxExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxExit);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTTT);
+            this.Controls.Add(this.textBoxMemory);
             this.Controls.Add(this.textBoxWar);
-            this.Name = "Form1";
+            this.Name = "MainMenu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -115,10 +119,10 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxWar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxMemory;
+        private System.Windows.Forms.TextBox textBoxTTT;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxExit;
     }
 }
 
