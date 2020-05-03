@@ -22,7 +22,7 @@ namespace Object_Oriented_Design_Project
         public Card playerDraw()
         {
             Card drawnCard = theDeck.drawCard();
-            this.addCardValue(drawnCard);
+            //this.addCardValue(drawnCard);
             return drawnCard;
         }
         public void resetPlayer()

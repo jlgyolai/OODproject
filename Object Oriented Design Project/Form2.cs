@@ -47,6 +47,7 @@ namespace Object_Oriented_Design_Project
 
         private void War_Load(object sender, EventArgs e)
         {
+            /*
             //array for the visible cards
             playerCards[0] = playerCard1;
             playerCards[1] = playerCard2;
@@ -58,7 +59,7 @@ namespace Object_Oriented_Design_Project
             dealerCards[2] = dealerCard3;
             dealerCards[3] = dealerCard4;
             dealerCards[4] = dealerCard5;
-
+            */
 
         }
 

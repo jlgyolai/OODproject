@@ -16,13 +16,13 @@ namespace Object_Oriented_Design_Project
         public Deck()
         {
             deck.Clear();
-            for(int deckNumber = 0; deckNumber < decks; deckNumber++)
+            for(int deckNo = 0; deckNo < decks; deckNo++)
             {
                 for(int suit = 0; suit < 4; suit++)
                 {
                     for(int face = 1; face <14; face++)
                     {
-                        deck.Add(new Card(face, suit, deckNumber));
+                        deck.Add(new Card(face, suit, deckNo));
                     }
                 }
             }

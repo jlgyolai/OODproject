@@ -9,12 +9,13 @@ namespace Object_Oriented_Design_Project
     public class Dealer
     {
         public int handValue = 0;
+        private List<Card> privHand = new List<Card>();
         Deck theDeck;
 
 
         public Dealer(Deck thedeck)
         {
-            theDeck = theDeck;
+            theDeck = thedeck;
         }
 
         public Card getOneDealerCard()
