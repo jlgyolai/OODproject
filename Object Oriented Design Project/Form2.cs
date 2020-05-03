@@ -34,5 +34,11 @@ namespace Object_Oriented_Design_Project
         {
             WarExit.BackColor = Color.OliveDrab;
         }
+
+        private void War_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
