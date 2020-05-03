@@ -52,6 +52,7 @@
             this.dWarBattle = new System.Windows.Forms.PictureBox();
             this.btnBattle = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard)).BeginInit();
@@ -106,6 +107,7 @@
             this.newGameToolStripMenuItem1,
             this.changeDeckToolStripMenuItem,
             this.changeThemeToolStripMenuItem,
+            this.infoToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
             this.newGameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -114,8 +116,9 @@
             // newGameToolStripMenuItem1
             // 
             this.newGameToolStripMenuItem1.Name = "newGameToolStripMenuItem1";
-            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.newGameToolStripMenuItem1.Text = "New Game";
+            this.newGameToolStripMenuItem1.Click += new System.EventHandler(this.newGameToolStripMenuItem1_Click);
             // 
             // changeDeckToolStripMenuItem
             // 
@@ -267,6 +270,13 @@
             this.titleLabel.TabIndex = 14;
             this.titleLabel.Text = "WAR";
             // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
+            // 
             // War
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 32F);
@@ -337,5 +347,6 @@
         private System.Windows.Forms.PictureBox dWarBattle;
         private System.Windows.Forms.Button btnBattle;
         private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
     }
 }
