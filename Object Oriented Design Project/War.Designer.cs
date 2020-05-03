@@ -39,6 +39,7 @@
             this.changeThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playerCard = new System.Windows.Forms.PictureBox();
             this.dealerCard = new System.Windows.Forms.PictureBox();
@@ -52,7 +53,6 @@
             this.dWarBattle = new System.Windows.Forms.PictureBox();
             this.btnBattle = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard)).BeginInit();
@@ -116,7 +116,7 @@
             // newGameToolStripMenuItem1
             // 
             this.newGameToolStripMenuItem1.Name = "newGameToolStripMenuItem1";
-            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.newGameToolStripMenuItem1.Text = "New Game";
             this.newGameToolStripMenuItem1.Click += new System.EventHandler(this.newGameToolStripMenuItem1_Click);
             // 
@@ -161,6 +161,13 @@
             this.darkModeToolStripMenuItem.Name = "darkModeToolStripMenuItem";
             this.darkModeToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.darkModeToolStripMenuItem.Text = "Dark Mode";
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -258,6 +265,7 @@
             this.btnBattle.TabIndex = 13;
             this.btnBattle.Text = "Battle!";
             this.btnBattle.UseVisualStyleBackColor = false;
+            this.btnBattle.Click += new System.EventHandler(this.battleClick);
             // 
             // titleLabel
             // 
@@ -269,13 +277,6 @@
             this.titleLabel.Size = new System.Drawing.Size(128, 57);
             this.titleLabel.TabIndex = 14;
             this.titleLabel.Text = "WAR";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.infoToolStripMenuItem.Text = "Info";
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // War
             // 
