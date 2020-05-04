@@ -50,11 +50,11 @@
     <Compile Include="Card.cs" />
     <Compile Include="Dealer.cs" />
     <Compile Include="Deck.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="War.cs">
       <SubType>Form</SubType>
@@ -77,8 +77,8 @@
     <Compile Include="TicTacToe.Designer.cs">
       <DependentUpon>TicTacToe.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="War.resx">
       <DependentUpon>War.cs</DependentUpon>
@@ -94,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TicTacToe.resx">
       <DependentUpon>TicTacToe.cs</DependentUpon>
@@ -111,8 +112,189 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Include="Images\2_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\4_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\4_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\4_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\4_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\6_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\6_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\6_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\6_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\7_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\7_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\7_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\7_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\8_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\8_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\8_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\8_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\9_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\9_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\9_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\9_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\10_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\10_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\10_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\10_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ace_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ace_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ace_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ace_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\back%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\black_joker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\city.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\dirtRoad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\jack_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\jack_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\jack_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\jack_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\king_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\king_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\king_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\king_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\lake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\park.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\queen_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\queen_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\queen_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\queen_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\red_joker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\valley.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

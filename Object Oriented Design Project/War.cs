@@ -139,11 +139,13 @@ namespace Object_Oriented_Design_Project
                 {
                     MessageBox.Show("Player wins!");
                     CardsInHand.Text = playerCardCount.ToString();
+                    isGameOver = true;
                 }
                 else if (playerCardCount == 0)
                 {
                     MessageBox.Show("Dealer wins!");
                     CardsInHand.Text = playerCardCount.ToString();
+                    isGameOver = true;
                 }
                 else
                 {

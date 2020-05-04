@@ -38,6 +38,7 @@
             // textBoxWar
             // 
             this.textBoxWar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxWar.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxWar.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxWar.Location = new System.Drawing.Point(205, 151);
             this.textBoxWar.Name = "textBoxWar";
