@@ -67,7 +67,7 @@ namespace Object_Oriented_Design_Project
             string filename = string.Concat(Name_0, Name_1, Name_2, Name_3, Name_4);
             Assembly assembly = Assembly.GetExecutingAssembly();
             Image ReturnVal;
-            Size size = new Size(100, 127);
+            Size size = new Size(146, 200);
             using (Stream stream = assembly.GetManifestResourceStream(filename))
             {
                 ReturnVal = (Image)new Bitmap(Image.FromStream(stream), size);

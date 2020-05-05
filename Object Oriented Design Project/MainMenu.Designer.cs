@@ -54,6 +54,7 @@
             // textBoxMemory
             // 
             this.textBoxMemory.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxMemory.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxMemory.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMemory.Location = new System.Drawing.Point(205, 221);
             this.textBoxMemory.Name = "textBoxMemory";
@@ -69,6 +70,7 @@
             // textBoxTTT
             // 
             this.textBoxTTT.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxTTT.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxTTT.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTTT.Location = new System.Drawing.Point(205, 292);
             this.textBoxTTT.Name = "textBoxTTT";
@@ -97,6 +99,7 @@
             // textBoxExit
             // 
             this.textBoxExit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxExit.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxExit.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxExit.Location = new System.Drawing.Point(205, 363);
             this.textBoxExit.Name = "textBoxExit";

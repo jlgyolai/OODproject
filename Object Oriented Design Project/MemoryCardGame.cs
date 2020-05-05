@@ -16,9 +16,10 @@ namespace Object_Oriented_Design_Project
         //fields
         bool gameOn = false;
         int timeLeft = 0;
-        List<Card> cardList = new List<Card>();
+        List<Image> cardList = new List<Image>();
         Random random = new Random();
-        PictureBox firstImage;
+        //first and second chosen cards
+        PictureBox firstImage; 
         PictureBox secondImage;
 
         #endregion
@@ -27,53 +28,53 @@ namespace Object_Oriented_Design_Project
         #region addCards
         public void addCards()
         {
-            Card jackCard = new Card(11, 0, 1);
+            Image jackCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_hearts.png"); 
             cardList.Add(jackCard);
-            Card jackCard2 = new Card(11, 0, 1);
+            Image jackCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_hearts.png");
             cardList.Add(jackCard2);
-            Card queenCard = new Card(12, 0, 1);
+            Image queenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
             cardList.Add(queenCard);
-            Card queenCard2 = new Card(12, 0, 1);
+            Image queenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
             cardList.Add(queenCard2);
-            Card kingCard = new Card(13, 0, 1);
+            Image kingCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
             cardList.Add(kingCard);
-            Card kingCard2 = new Card(13, 0, 1);
+            Image kingCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
             cardList.Add(kingCard2);
-            Card twoCard = new Card(2, 0, 1);
+            Image twoCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
             cardList.Add(twoCard);
-            Card twoCard2 = new Card(2, 0, 1);
+            Image twoCard2= Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
             cardList.Add(twoCard2);
-            Card threeCard = new Card(3, 0, 1);
+            Image threeCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
             cardList.Add(threeCard);
-            Card threeCard2 = new Card(3, 0, 1);
+            Image threeCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
             cardList.Add(threeCard2);
-            Card fourCard = new Card(4, 0, 1);
+            Image fourCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png");
             cardList.Add(fourCard);
-            Card fourCard2 = new Card(4, 0, 1);
+            Image fourCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png"); ;
             cardList.Add(fourCard2);
-            Card fiveCard = new Card(5, 0, 1);
+            Image fiveCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\5_of_clubs.png");
             cardList.Add(fiveCard);
-            Card fiveCard2 = new Card(5, 0, 1);
+            Image fiveCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\5_of_clubs.png");
             cardList.Add(fiveCard2);
-            Card sixCard = new Card(6, 0, 1);
+            Image sixCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\6_of_clubs.png");
             cardList.Add(sixCard);
-            Card sixCard2 = new Card(6, 0, 1);
+            Image sixCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\6_of_clubs.png");
             cardList.Add(sixCard2);
-            Card sevenCard = new Card(7, 0, 1);
+            Image sevenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\7_of_clubs.png");
             cardList.Add(sevenCard);
-            Card sevenCard2 = new Card(7, 0, 1);
+            Image sevenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\7_of_clubs.png");
             cardList.Add(sevenCard2);
-            Card eightCard = new Card(8, 0, 1);
+            Image eightCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
             cardList.Add(eightCard);
-            Card eightCard2 = new Card(8, 0, 1);
+            Image eightCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
             cardList.Add(eightCard2);
-            Card nineCard = new Card(9, 0, 1);
+            Image nineCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
             cardList.Add(nineCard);
-            Card nineCard2 = new Card(9, 0, 1);
+            Image nineCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
             cardList.Add(nineCard2);
-            Card tenCard = new Card(10, 0, 1);
+            Image tenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
             cardList.Add(tenCard);
-            Card tenCard2 = new Card(10, 0, 1);
+            Image tenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
             cardList.Add(tenCard2);
         }
         #endregion
@@ -94,8 +95,8 @@ namespace Object_Oriented_Design_Project
         #region edits for cards NOT USED
         /*
         Image jackCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
-        Image queenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
-        Image kingCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
+        Image queenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
+        Image kingCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
         Image twoCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
         Image threeCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
         Image fourCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png");
@@ -124,7 +125,8 @@ namespace Object_Oriented_Design_Project
         public MemoryCardGame()
         {
             InitializeComponent();
-            randomizeCards();
+            addCards();
+            //randomizeCards();
         }
 
         //method to clear the cards and show the unflipped image
@@ -169,6 +171,30 @@ namespace Object_Oriented_Design_Project
         }
         #endregion
 
+        //method to get card image
+        public Image cardImage(int cardNo)
+        {
+            string Name_0 = @"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\";
+            string Name_1 = cardNo.ToString();
+            string Name_2 = "_of_clubs.png";
+            string filename = string.Concat(Name_0, Name_1, Name_2);
+
+            if (cardNo == 11)
+            {
+                return Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
+            }
+            else if (cardNo == 12)
+            {
+                return Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
+            }
+            else if (cardNo == 13)
+            {
+                return Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
+            }
+            else
+                return Image.FromFile(filename);
+                   
+        }
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //when clicking new game from the drop down menu
@@ -213,7 +239,7 @@ namespace Object_Oriented_Design_Project
             int randomNo;
             
 
-            for(int i=0; i< tableLayoutPanel1.Controls.Count; i++)
+            for(int i = 0; i < 23; i++)
             {
                 if(tableLayoutPanel1.Controls[i] is PictureBox)
                 {
@@ -223,10 +249,9 @@ namespace Object_Oriented_Design_Project
                 {
                     continue;
                 }
-                randomNo = random.Next(0, cardList.Count);
-                
-                var temp = cardList[randomNo].cardFront();
-                newCard.BackgroundImage = temp;
+                randomNo = random.Next(0, 23);
+
+                newCard.BackgroundImage = cardList[randomNo];
 
                 cardList.RemoveAt(randomNo);
             }
@@ -287,6 +312,11 @@ namespace Object_Oriented_Design_Project
         #endregion
 
         private void MemoryCardGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imageClick(object sender, EventArgs e)
         {
 
         }

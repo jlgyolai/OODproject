@@ -153,5 +153,15 @@ namespace Object_Oriented_Design_Project
                 }
             }
         }
+
+        private void btnBattle_MouseEnter(object sender, EventArgs e)
+        {
+            btnBattle.BackColor = Color.Olive;
+        }
+
+        private void btnBattle_MouseLeave(object sender, EventArgs e)
+        {
+            btnBattle.BackColor = Color.OliveDrab;
+        }
     }
 }

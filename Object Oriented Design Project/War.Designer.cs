@@ -80,6 +80,7 @@
             // WarExit
             // 
             this.WarExit.BackColor = System.Drawing.Color.OliveDrab;
+            this.WarExit.Cursor = System.Windows.Forms.Cursors.Default;
             this.WarExit.Location = new System.Drawing.Point(1133, 823);
             this.WarExit.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.WarExit.Name = "WarExit";
@@ -266,6 +267,8 @@
             this.btnBattle.Text = "Battle!";
             this.btnBattle.UseVisualStyleBackColor = false;
             this.btnBattle.Click += new System.EventHandler(this.battleClick);
+            this.btnBattle.MouseEnter += new System.EventHandler(this.btnBattle_MouseEnter);
+            this.btnBattle.MouseLeave += new System.EventHandler(this.btnBattle_MouseLeave);
             // 
             // titleLabel
             // 
