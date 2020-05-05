@@ -15,6 +15,13 @@ namespace Object_Oriented_Design_Project
         bool gameOn = false;
         int timeLeft = 0;
 
+        List<Card> memCards = new List<Card>()
+        {
+            
+        };
+
+
+
        //wallpapers for memory game
 
         Image valley = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\valley.jpg");
@@ -136,6 +143,19 @@ namespace Object_Oriented_Design_Project
             }
         }
 
+        /*
+        private void randomizeCards()
+        {
+            Label label;
+            int randomNo;
+
+            for(int i=0; i<24; i++)
+            {
+                if()
+            }
+        }
+        */
+
         void timerTick(object sender, EventArgs e)
         {
             if(timeLeft > 0)
@@ -155,6 +175,7 @@ namespace Object_Oriented_Design_Project
         private void dirtRoadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = dirtRoad;
+            
         }
 
         private void cityscapeToolStripMenuItem_Click(object sender, EventArgs e)
