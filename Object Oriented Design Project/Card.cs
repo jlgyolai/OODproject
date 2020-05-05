@@ -96,7 +96,7 @@ namespace Object_Oriented_Design_Project
         //11, 12, 13 = jack, queen, king
         public int Face
         {
-            private set
+            set
             {
                 if ((value > 0) && (value < 14))
                 {
@@ -157,7 +157,7 @@ namespace Object_Oriented_Design_Project
         //memory card game since single deck is irrelevant. Might make War a 2 deck game.
         public int DeckNo
         {
-            private set
+            set
             {
                 if(value >= 0)
                 {

@@ -12,28 +12,87 @@ namespace Object_Oriented_Design_Project
 {
     public partial class MemoryCardGame : Form
     {
+        #region fields
+        //fields
         bool gameOn = false;
         int timeLeft = 0;
+        List<Card> cardList = new List<Card>();
+        Random random = new Random();
+        PictureBox firstImage;
+        PictureBox secondImage;
 
-        List<Card> memCards = new List<Card>()
+        #endregion
+
+        //method to add cards to cards list
+        #region addCards
+        public void addCards()
         {
-            
-        };
+            Card jackCard = new Card(11, 0, 1);
+            cardList.Add(jackCard);
+            Card jackCard2 = new Card(11, 0, 1);
+            cardList.Add(jackCard2);
+            Card queenCard = new Card(12, 0, 1);
+            cardList.Add(queenCard);
+            Card queenCard2 = new Card(12, 0, 1);
+            cardList.Add(queenCard2);
+            Card kingCard = new Card(13, 0, 1);
+            cardList.Add(kingCard);
+            Card kingCard2 = new Card(13, 0, 1);
+            cardList.Add(kingCard2);
+            Card twoCard = new Card(2, 0, 1);
+            cardList.Add(twoCard);
+            Card twoCard2 = new Card(2, 0, 1);
+            cardList.Add(twoCard2);
+            Card threeCard = new Card(3, 0, 1);
+            cardList.Add(threeCard);
+            Card threeCard2 = new Card(3, 0, 1);
+            cardList.Add(threeCard2);
+            Card fourCard = new Card(4, 0, 1);
+            cardList.Add(fourCard);
+            Card fourCard2 = new Card(4, 0, 1);
+            cardList.Add(fourCard2);
+            Card fiveCard = new Card(5, 0, 1);
+            cardList.Add(fiveCard);
+            Card fiveCard2 = new Card(5, 0, 1);
+            cardList.Add(fiveCard2);
+            Card sixCard = new Card(6, 0, 1);
+            cardList.Add(sixCard);
+            Card sixCard2 = new Card(6, 0, 1);
+            cardList.Add(sixCard2);
+            Card sevenCard = new Card(7, 0, 1);
+            cardList.Add(sevenCard);
+            Card sevenCard2 = new Card(7, 0, 1);
+            cardList.Add(sevenCard2);
+            Card eightCard = new Card(8, 0, 1);
+            cardList.Add(eightCard);
+            Card eightCard2 = new Card(8, 0, 1);
+            cardList.Add(eightCard2);
+            Card nineCard = new Card(9, 0, 1);
+            cardList.Add(nineCard);
+            Card nineCard2 = new Card(9, 0, 1);
+            cardList.Add(nineCard2);
+            Card tenCard = new Card(10, 0, 1);
+            cardList.Add(tenCard);
+            Card tenCard2 = new Card(10, 0, 1);
+            cardList.Add(tenCard2);
+        }
+        #endregion
 
-
-
-       //wallpapers for memory game
-
+        //wallpapers for memory game
+        #region Wallpapers
         Image valley = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\valley.jpg");
         Image city = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\city.jpg");
         Image lake = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\lake.jpg");
         Image dirtRoad = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\dirtRoad.jpg");
         Image park = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\park.jpg");
+        #endregion
 
         //cards for the memory game
 
         Image unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\back.png");
 
+        #region edits for cards NOT USED
+        /*
         Image jackCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
         Image queenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
         Image kingCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
@@ -59,14 +118,17 @@ namespace Object_Oriented_Design_Project
         Image eightCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
         Image nineCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
         Image tenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
-
-
+        */
+        #endregion
 
         public MemoryCardGame()
         {
             InitializeComponent();
+            randomizeCards();
         }
 
+        //method to clear the cards and show the unflipped image
+        #region clearCards
         public void clearCards()
         {
             card1.BackgroundImage = unflipped;
@@ -94,6 +156,10 @@ namespace Object_Oriented_Design_Project
             card23.BackgroundImage = unflipped;
             card24.BackgroundImage = unflipped;
         }
+        #endregion
+
+        //method to close the game
+        #region closing
         private void MCGExit_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -101,11 +167,7 @@ namespace Object_Oriented_Design_Project
             newForm.FormClosed += (s, args) => this.Close();
             newForm.Show();
         }
-
-        private void valleyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackgroundImage = valley;
-        }
+        #endregion
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -143,35 +205,59 @@ namespace Object_Oriented_Design_Project
             }
         }
 
-        /*
+        //randomize cards and place them onto the board
+        #region randomizeCards
         private void randomizeCards()
         {
-            Label label;
+            PictureBox newCard;
             int randomNo;
+            
 
-            for(int i=0; i<24; i++)
+            for(int i=0; i< tableLayoutPanel1.Controls.Count; i++)
             {
-                if()
+                if(tableLayoutPanel1.Controls[i] is PictureBox)
+                {
+                    newCard = (PictureBox)tableLayoutPanel1.Controls[i];
+                }
+                else
+                {
+                    continue;
+                }
+                randomNo = random.Next(0, cardList.Count);
+                
+                var temp = cardList[randomNo].cardFront();
+                newCard.BackgroundImage = temp;
+
+                cardList.RemoveAt(randomNo);
             }
         }
-        */
+        #endregion
 
+        //timer method
+        #region timerTick
         void timerTick(object sender, EventArgs e)
         {
             if(timeLeft > 0)
             {
                 timeLeft = timeLeft - 1;
-                Timer.Text = timeLeft + " seconds";
+                Timer.Text = "Time: " + timeLeft + " seconds";
             }
             else
             {
                 timer1.Stop();
-                Timer.Text = "0";
+                Timer.Text = "Time: 0 seconds";
                 gameOn = false;
 
             }
         }
+        #endregion
 
+        //setting wallpaper methods
+        #region wallpapers
+        private void valleyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = valley;
+        }
         private void dirtRoadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = dirtRoad;
@@ -197,6 +283,8 @@ namespace Object_Oriented_Design_Project
         {
             this.BackgroundImage = null;
         }
+
+        #endregion
 
         private void MemoryCardGame_Load(object sender, EventArgs e)
         {
