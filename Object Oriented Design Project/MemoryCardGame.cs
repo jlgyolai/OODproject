@@ -12,14 +12,24 @@ namespace Object_Oriented_Design_Project
 {
     public partial class MemoryCardGame : Form
     {
-       
+        bool gameOn = false;
+        int timeLeft = 0;
+
+       //wallpapers for memory game
+
         Image valley = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\valley.jpg");
         Image city = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\city.jpg");
         Image lake = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\lake.jpg");
         Image dirtRoad = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\dirtRoad.jpg");
         Image park = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\park.jpg");
+
+        //cards for the memory game
+
         Image unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\back.png");
-        Image oneCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\ace_of_clubs.png");
+
+        Image jackCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
+        Image queenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
+        Image kingCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
         Image twoCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
         Image threeCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
         Image fourCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png");
@@ -29,6 +39,19 @@ namespace Object_Oriented_Design_Project
         Image eightCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
         Image nineCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
         Image tenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
+
+        Image jackCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
+        Image queenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
+        Image kingCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
+        Image twoCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
+        Image threeCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
+        Image fourCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png");
+        Image fiveCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\5_of_clubs.png");
+        Image sixCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\6_of_clubs.png");
+        Image sevenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\7_of_clubs.png");
+        Image eightCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
+        Image nineCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
+        Image tenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
 
 
 
@@ -79,16 +102,54 @@ namespace Object_Oriented_Design_Project
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //when clicking new game from the drop down menu
+            //clear the cards/flip them over to only show back
             clearCards();
-            var timer = new Timer();
-            timer.Interval = 60;
-            timer.Start();
-            Timer.Text = timer.ToString();
+            //randomize cards
+
+            //set up the timer
+
+            var memorygametimer = new Timer();
+            memorygametimer.Interval = 60;
+
+            timeLeft = 60;
+            Timer.Text = "60 seconds";
+            timer1.Start();
+
+            //set the game to ready
+            gameOn = true;
+            //start the game
+            playGame();
+        }
+
+        private void playGame()
+        {
+            //game code
+
+            if(gameOn==false)
+            {
+                MessageBox.Show("Please start a new game from the menu.");
+            }
+            else
+            {
+                //
+            }
         }
 
         void timerTick(object sender, EventArgs e)
         {
+            if(timeLeft > 0)
+            {
+                timeLeft = timeLeft - 1;
+                Timer.Text = timeLeft + " seconds";
+            }
+            else
+            {
+                timer1.Stop();
+                Timer.Text = "0";
+                gameOn = false;
 
+            }
         }
 
         private void dirtRoadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,6 +175,11 @@ namespace Object_Oriented_Design_Project
         private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
+        }
+
+        private void MemoryCardGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

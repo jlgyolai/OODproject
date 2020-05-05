@@ -63,7 +63,6 @@
             this.textBoxMemory.Text = "Memory Matching";
             this.textBoxMemory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxMemory.Click += new System.EventHandler(this.textBoxMemory_Click);
-            this.textBoxMemory.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             this.textBoxMemory.MouseEnter += new System.EventHandler(this.textBoxMemory_MouseEnter);
             this.textBoxMemory.MouseLeave += new System.EventHandler(this.textBoxMemory_MouseLeave);
             // 

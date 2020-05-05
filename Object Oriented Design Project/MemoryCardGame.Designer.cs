@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MCGExit = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,6 +36,10 @@
             this.changeThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valleyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dirtRoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cityscapeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lakeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.placeholderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,10 +69,7 @@
             this.card23 = new System.Windows.Forms.PictureBox();
             this.card24 = new System.Windows.Forms.PictureBox();
             this.Timer = new System.Windows.Forms.Label();
-            this.dirtRoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cityscapeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lakeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.card1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card2)).BeginInit();
@@ -129,7 +131,7 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -143,22 +145,50 @@
             this.lakeToolStripMenuItem,
             this.parkToolStripMenuItem});
             this.changeThemeToolStripMenuItem.Name = "changeThemeToolStripMenuItem";
-            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.changeThemeToolStripMenuItem.Text = "Change Theme";
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.defaultToolStripMenuItem.Text = "Default";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // valleyToolStripMenuItem
             // 
             this.valleyToolStripMenuItem.Name = "valleyToolStripMenuItem";
-            this.valleyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.valleyToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.valleyToolStripMenuItem.Text = "Valley";
             this.valleyToolStripMenuItem.Click += new System.EventHandler(this.valleyToolStripMenuItem_Click);
+            // 
+            // dirtRoadToolStripMenuItem
+            // 
+            this.dirtRoadToolStripMenuItem.Name = "dirtRoadToolStripMenuItem";
+            this.dirtRoadToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.dirtRoadToolStripMenuItem.Text = "Dirt Road";
+            this.dirtRoadToolStripMenuItem.Click += new System.EventHandler(this.dirtRoadToolStripMenuItem_Click);
+            // 
+            // cityscapeToolStripMenuItem
+            // 
+            this.cityscapeToolStripMenuItem.Name = "cityscapeToolStripMenuItem";
+            this.cityscapeToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.cityscapeToolStripMenuItem.Text = "Cityscape";
+            this.cityscapeToolStripMenuItem.Click += new System.EventHandler(this.cityscapeToolStripMenuItem_Click);
+            // 
+            // lakeToolStripMenuItem
+            // 
+            this.lakeToolStripMenuItem.Name = "lakeToolStripMenuItem";
+            this.lakeToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.lakeToolStripMenuItem.Text = "Lake";
+            this.lakeToolStripMenuItem.Click += new System.EventHandler(this.lakeToolStripMenuItem_Click);
+            // 
+            // parkToolStripMenuItem
+            // 
+            this.parkToolStripMenuItem.Name = "parkToolStripMenuItem";
+            this.parkToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.parkToolStripMenuItem.Text = "Park";
+            this.parkToolStripMenuItem.Click += new System.EventHandler(this.parkToolStripMenuItem_Click);
             // 
             // changeDeckToolStripMenuItem
             // 
@@ -166,7 +196,7 @@
             this.defaultToolStripMenuItem1,
             this.placeholderToolStripMenuItem});
             this.changeDeckToolStripMenuItem.Name = "changeDeckToolStripMenuItem";
-            this.changeDeckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeDeckToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.changeDeckToolStripMenuItem.Text = "Change Deck";
             // 
             // defaultToolStripMenuItem1
@@ -184,7 +214,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.MCGExit_Click);
             // 
@@ -383,6 +413,7 @@
             // Timer
             // 
             this.Timer.AutoSize = true;
+            this.Timer.BackColor = System.Drawing.Color.Transparent;
             this.Timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Timer.Location = new System.Drawing.Point(1337, 35);
             this.Timer.Name = "Timer";
@@ -390,38 +421,17 @@
             this.Timer.TabIndex = 26;
             this.Timer.Text = "Time:";
             // 
-            // dirtRoadToolStripMenuItem
+            // timer1
             // 
-            this.dirtRoadToolStripMenuItem.Name = "dirtRoadToolStripMenuItem";
-            this.dirtRoadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dirtRoadToolStripMenuItem.Text = "Dirt Road";
-            this.dirtRoadToolStripMenuItem.Click += new System.EventHandler(this.dirtRoadToolStripMenuItem_Click);
-            // 
-            // cityscapeToolStripMenuItem
-            // 
-            this.cityscapeToolStripMenuItem.Name = "cityscapeToolStripMenuItem";
-            this.cityscapeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cityscapeToolStripMenuItem.Text = "Cityscape";
-            this.cityscapeToolStripMenuItem.Click += new System.EventHandler(this.cityscapeToolStripMenuItem_Click);
-            // 
-            // lakeToolStripMenuItem
-            // 
-            this.lakeToolStripMenuItem.Name = "lakeToolStripMenuItem";
-            this.lakeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lakeToolStripMenuItem.Text = "Lake";
-            this.lakeToolStripMenuItem.Click += new System.EventHandler(this.lakeToolStripMenuItem_Click);
-            // 
-            // parkToolStripMenuItem
-            // 
-            this.parkToolStripMenuItem.Name = "parkToolStripMenuItem";
-            this.parkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.parkToolStripMenuItem.Text = "Park";
-            this.parkToolStripMenuItem.Click += new System.EventHandler(this.parkToolStripMenuItem_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timerTick);
             // 
             // MemoryCardGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.Timer);
             this.Controls.Add(this.card24);
@@ -453,6 +463,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MemoryCardGame";
             this.Text = "MemoryCardGame";
+            this.Load += new System.EventHandler(this.MemoryCardGame_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.card1)).EndInit();
@@ -526,5 +537,6 @@
         private System.Windows.Forms.ToolStripMenuItem cityscapeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lakeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parkToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }
