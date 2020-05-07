@@ -18,6 +18,7 @@ namespace Object_Oriented_Design_Project
         int timeLeft = 0;
         List<Image> cardList = new List<Image>();
         Random random = new Random();
+        PictureBox[] cardGrid = new PictureBox[24];
         //first and second chosen cards
         PictureBox firstImage; 
         PictureBox secondImage;
@@ -174,26 +175,36 @@ namespace Object_Oriented_Design_Project
         //method to get card image
         public Image cardImage(int cardNo)
         {
-            string Name_0 = @"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\";
-            string Name_1 = cardNo.ToString();
-            string Name_2 = "_of_clubs.png";
-            string filename = string.Concat(Name_0, Name_1, Name_2);
 
-            if (cardNo == 11)
+            switch (cardNo)
             {
-                return Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
-            }
-            else if (cardNo == 12)
-            {
-                return Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
-            }
-            else if (cardNo == 13)
-            {
-                return Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
-            }
-            else
-                return Image.FromFile(filename);
-                   
+                case 2:
+                    return Properties.Resources._2_of_clubs;
+                case 3:
+                    return Properties.Resources._3_of_clubs;
+                case 4:
+                    return Properties.Resources._4_of_clubs;
+                case 5:
+                    return Properties.Resources._5_of_clubs;
+                case 6:
+                    return Properties.Resources._6_of_clubs;
+                case 7:
+                    return Properties.Resources._7_of_clubs;
+                case 8:
+                    return Properties.Resources._8_of_clubs;
+                case 9:
+                    return Properties.Resources._9_of_clubs;
+                case 10:
+                    return Properties.Resources._10_of_clubs;
+                case 11:
+                    return Properties.Resources.jack_of_clubs;
+                case 12:
+                    return Properties.Resources.queen_of_clubs;
+                case 13:
+                    return Properties.Resources.king_of_clubs;
+                default:
+                    return unflipped;
+            }       
         }
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -241,7 +252,7 @@ namespace Object_Oriented_Design_Project
 
             for(int i = 0; i < 23; i++)
             {
-                if(tableLayoutPanel1.Controls[i] is PictureBox)
+                if(cardsGrid[i] is PictureBox)
                 {
                     newCard = (PictureBox)tableLayoutPanel1.Controls[i];
                 }
@@ -315,7 +326,40 @@ namespace Object_Oriented_Design_Project
 
         private void MemoryCardGame_Load(object sender, EventArgs e)
         {
+            
 
+            //assign card pictureboxes to a control
+            cardGrid[0] = card1;
+            cardGrid[1] = card2;
+            cardGrid[2] = card3;
+            cardGrid[3] = card4;
+            cardGrid[4] = card5;
+            cardGrid[5] = card6;
+            cardGrid[6] = card7;
+            cardGrid[7] = card8;
+            cardGrid[8] = card9;
+            cardGrid[9] = card10;
+            cardGrid[10] = card11;
+            cardGrid[11] = card12;
+            cardGrid[12] = card13;
+            cardGrid[13] = card14;
+            cardGrid[14] = card15;
+            cardGrid[15] = card16;
+            cardGrid[16] = card17;
+            cardGrid[17] = card18;
+            cardGrid[18] = card19;
+            cardGrid[19] = card20;
+            cardGrid[20] = card21;
+            cardGrid[21] = card22;
+            cardGrid[22] = card23;
+            cardGrid[23] = card24;
+
+            //make the picture boxes visible and set the default card theme
+            for(int i = 0; i <24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImage();
+            }
         }
 
         private void imageClick(object sender, EventArgs e)
@@ -326,43 +370,72 @@ namespace Object_Oriented_Design_Project
         #region Card Themes
         private void eyesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\eyes.jpg");
-            clearCards();
+            for (int i = 0; i < 24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImageEyes();
+                unflipped = Card.getCardBackImageEyes();
+            }
         }
 
         private void goldenFlowerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\goldenFlower.jpg");
-            clearCards();
+           for(int i = 0; i < 24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImageGoldenFlower();
+                unflipped = Card.getCardBackImageGoldenFlower();
+            }
         }
 
         private void owlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\owls.jpg");
-            clearCards();
+            for (int i = 0; i < 24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImageOwls();
+                unflipped = Card.getCardBackImageOwls();
+            }
         }
 
         private void snakesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakes.jpg");
-            clearCards();
+            for (int i = 0; i < 24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImageSnakes();
+                unflipped = Card.getCardBackImageSnakes();
+            }
         }
 
         private void redSnakesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakesRed.jpg");
-            clearCards();
+            for (int i = 0; i < 24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImageSnakesRed();
+                unflipped = Card.getCardBackImageSnakesRed();
+            }
         }
 
         private void blueDragonsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\dragonsBlue.png");
-            clearCards();
+            for (int i = 0; i < 24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImageDragonsBlue();
+                unflipped = Card.getCardBackImageDragonsBlue();
+            }
         }
 
         private void defaultToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\back.png");
+            for (int i = 0; i < 24; i++)
+            {
+                cardGrid[i].Visible = true;
+                cardGrid[i].Image = Card.getCardBackImage();
+                unflipped = Card.getCardBackImage();
+            }
         }
         #endregion
     }

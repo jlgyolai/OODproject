@@ -51,55 +51,55 @@
             this.snakesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redSnakesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueDragonsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.card1 = new System.Windows.Forms.PictureBox();
-            this.card2 = new System.Windows.Forms.PictureBox();
-            this.card3 = new System.Windows.Forms.PictureBox();
-            this.card4 = new System.Windows.Forms.PictureBox();
-            this.card5 = new System.Windows.Forms.PictureBox();
-            this.card6 = new System.Windows.Forms.PictureBox();
-            this.card7 = new System.Windows.Forms.PictureBox();
-            this.card8 = new System.Windows.Forms.PictureBox();
-            this.card9 = new System.Windows.Forms.PictureBox();
-            this.card10 = new System.Windows.Forms.PictureBox();
-            this.card11 = new System.Windows.Forms.PictureBox();
-            this.card12 = new System.Windows.Forms.PictureBox();
-            this.card13 = new System.Windows.Forms.PictureBox();
-            this.card14 = new System.Windows.Forms.PictureBox();
-            this.card15 = new System.Windows.Forms.PictureBox();
-            this.card16 = new System.Windows.Forms.PictureBox();
-            this.card17 = new System.Windows.Forms.PictureBox();
-            this.card18 = new System.Windows.Forms.PictureBox();
-            this.card19 = new System.Windows.Forms.PictureBox();
-            this.card20 = new System.Windows.Forms.PictureBox();
-            this.card21 = new System.Windows.Forms.PictureBox();
-            this.card22 = new System.Windows.Forms.PictureBox();
-            this.card23 = new System.Windows.Forms.PictureBox();
             this.card24 = new System.Windows.Forms.PictureBox();
+            this.card23 = new System.Windows.Forms.PictureBox();
+            this.card22 = new System.Windows.Forms.PictureBox();
+            this.card21 = new System.Windows.Forms.PictureBox();
+            this.card20 = new System.Windows.Forms.PictureBox();
+            this.card1 = new System.Windows.Forms.PictureBox();
+            this.card19 = new System.Windows.Forms.PictureBox();
+            this.card2 = new System.Windows.Forms.PictureBox();
+            this.card18 = new System.Windows.Forms.PictureBox();
+            this.card3 = new System.Windows.Forms.PictureBox();
+            this.card17 = new System.Windows.Forms.PictureBox();
+            this.card4 = new System.Windows.Forms.PictureBox();
+            this.card16 = new System.Windows.Forms.PictureBox();
+            this.card5 = new System.Windows.Forms.PictureBox();
+            this.card15 = new System.Windows.Forms.PictureBox();
+            this.card6 = new System.Windows.Forms.PictureBox();
+            this.card14 = new System.Windows.Forms.PictureBox();
+            this.card7 = new System.Windows.Forms.PictureBox();
+            this.card13 = new System.Windows.Forms.PictureBox();
+            this.card8 = new System.Windows.Forms.PictureBox();
+            this.card12 = new System.Windows.Forms.PictureBox();
+            this.card9 = new System.Windows.Forms.PictureBox();
+            this.card11 = new System.Windows.Forms.PictureBox();
+            this.card10 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.card1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card10)).BeginInit();
             this.SuspendLayout();
             // 
             // MCGExit
@@ -138,7 +138,7 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -152,48 +152,48 @@
             this.lakeToolStripMenuItem,
             this.parkToolStripMenuItem});
             this.changeThemeToolStripMenuItem.Name = "changeThemeToolStripMenuItem";
-            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.changeThemeToolStripMenuItem.Text = "Change Theme";
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.defaultToolStripMenuItem.Text = "Default";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // valleyToolStripMenuItem
             // 
             this.valleyToolStripMenuItem.Name = "valleyToolStripMenuItem";
-            this.valleyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.valleyToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.valleyToolStripMenuItem.Text = "Valley";
             this.valleyToolStripMenuItem.Click += new System.EventHandler(this.valleyToolStripMenuItem_Click);
             // 
             // dirtRoadToolStripMenuItem
             // 
             this.dirtRoadToolStripMenuItem.Name = "dirtRoadToolStripMenuItem";
-            this.dirtRoadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dirtRoadToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.dirtRoadToolStripMenuItem.Text = "Dirt Road";
             this.dirtRoadToolStripMenuItem.Click += new System.EventHandler(this.dirtRoadToolStripMenuItem_Click);
             // 
             // cityscapeToolStripMenuItem
             // 
             this.cityscapeToolStripMenuItem.Name = "cityscapeToolStripMenuItem";
-            this.cityscapeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cityscapeToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.cityscapeToolStripMenuItem.Text = "Cityscape";
             this.cityscapeToolStripMenuItem.Click += new System.EventHandler(this.cityscapeToolStripMenuItem_Click);
             // 
             // lakeToolStripMenuItem
             // 
             this.lakeToolStripMenuItem.Name = "lakeToolStripMenuItem";
-            this.lakeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lakeToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.lakeToolStripMenuItem.Text = "Lake";
             this.lakeToolStripMenuItem.Click += new System.EventHandler(this.lakeToolStripMenuItem_Click);
             // 
             // parkToolStripMenuItem
             // 
             this.parkToolStripMenuItem.Name = "parkToolStripMenuItem";
-            this.parkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parkToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.parkToolStripMenuItem.Text = "Park";
             this.parkToolStripMenuItem.Click += new System.EventHandler(this.parkToolStripMenuItem_Click);
             // 
@@ -208,20 +208,20 @@
             this.redSnakesToolStripMenuItem,
             this.blueDragonsToolStripMenuItem});
             this.changeDeckToolStripMenuItem.Name = "changeDeckToolStripMenuItem";
-            this.changeDeckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeDeckToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.changeDeckToolStripMenuItem.Text = "Change Deck";
             // 
             // defaultToolStripMenuItem1
             // 
             this.defaultToolStripMenuItem1.Name = "defaultToolStripMenuItem1";
-            this.defaultToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.defaultToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.defaultToolStripMenuItem1.Text = "Default";
             this.defaultToolStripMenuItem1.Click += new System.EventHandler(this.defaultToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.MCGExit_Click);
             // 
@@ -246,44 +246,99 @@
             // eyesToolStripMenuItem
             // 
             this.eyesToolStripMenuItem.Name = "eyesToolStripMenuItem";
-            this.eyesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eyesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.eyesToolStripMenuItem.Text = "Eyes";
             this.eyesToolStripMenuItem.Click += new System.EventHandler(this.eyesToolStripMenuItem_Click);
             // 
             // goldenFlowerToolStripMenuItem
             // 
             this.goldenFlowerToolStripMenuItem.Name = "goldenFlowerToolStripMenuItem";
-            this.goldenFlowerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goldenFlowerToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.goldenFlowerToolStripMenuItem.Text = "Golden Flower";
             this.goldenFlowerToolStripMenuItem.Click += new System.EventHandler(this.goldenFlowerToolStripMenuItem_Click);
             // 
             // owlsToolStripMenuItem
             // 
             this.owlsToolStripMenuItem.Name = "owlsToolStripMenuItem";
-            this.owlsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.owlsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.owlsToolStripMenuItem.Text = "Owls";
             this.owlsToolStripMenuItem.Click += new System.EventHandler(this.owlsToolStripMenuItem_Click);
             // 
             // snakesToolStripMenuItem
             // 
             this.snakesToolStripMenuItem.Name = "snakesToolStripMenuItem";
-            this.snakesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.snakesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.snakesToolStripMenuItem.Text = "Snakes";
             this.snakesToolStripMenuItem.Click += new System.EventHandler(this.snakesToolStripMenuItem_Click);
             // 
             // redSnakesToolStripMenuItem
             // 
             this.redSnakesToolStripMenuItem.Name = "redSnakesToolStripMenuItem";
-            this.redSnakesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.redSnakesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.redSnakesToolStripMenuItem.Text = "Red Snakes";
             this.redSnakesToolStripMenuItem.Click += new System.EventHandler(this.redSnakesToolStripMenuItem_Click);
             // 
             // blueDragonsToolStripMenuItem
             // 
             this.blueDragonsToolStripMenuItem.Name = "blueDragonsToolStripMenuItem";
-            this.blueDragonsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.blueDragonsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.blueDragonsToolStripMenuItem.Text = "Blue Dragons";
             this.blueDragonsToolStripMenuItem.Click += new System.EventHandler(this.blueDragonsToolStripMenuItem_Click);
+            // 
+            // card24
+            // 
+            this.card24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card24.Location = new System.Drawing.Point(1282, 550);
+            this.card24.Name = "card24";
+            this.card24.Size = new System.Drawing.Size(146, 200);
+            this.card24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card24.TabIndex = 23;
+            this.card24.TabStop = false;
+            this.card24.Click += new System.EventHandler(this.imageClick);
+            // 
+            // card23
+            // 
+            this.card23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card23.Location = new System.Drawing.Point(1112, 550);
+            this.card23.Name = "card23";
+            this.card23.Size = new System.Drawing.Size(146, 200);
+            this.card23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card23.TabIndex = 22;
+            this.card23.TabStop = false;
+            this.card23.Click += new System.EventHandler(this.imageClick);
+            // 
+            // card22
+            // 
+            this.card22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card22.Location = new System.Drawing.Point(948, 550);
+            this.card22.Name = "card22";
+            this.card22.Size = new System.Drawing.Size(146, 200);
+            this.card22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card22.TabIndex = 21;
+            this.card22.TabStop = false;
+            this.card22.Click += new System.EventHandler(this.imageClick);
+            // 
+            // card21
+            // 
+            this.card21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card21.Location = new System.Drawing.Point(781, 550);
+            this.card21.Name = "card21";
+            this.card21.Size = new System.Drawing.Size(146, 200);
+            this.card21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card21.TabIndex = 20;
+            this.card21.TabStop = false;
+            this.card21.Click += new System.EventHandler(this.imageClick);
+            // 
+            // card20
+            // 
+            this.card20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card20.Location = new System.Drawing.Point(615, 550);
+            this.card20.Name = "card20";
+            this.card20.Size = new System.Drawing.Size(146, 200);
+            this.card20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card20.TabIndex = 19;
+            this.card20.TabStop = false;
+            this.card20.Click += new System.EventHandler(this.imageClick);
             // 
             // card1
             // 
@@ -298,6 +353,17 @@
             this.card1.TabStop = false;
             this.card1.Click += new System.EventHandler(this.imageClick);
             // 
+            // card19
+            // 
+            this.card19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card19.Location = new System.Drawing.Point(447, 550);
+            this.card19.Name = "card19";
+            this.card19.Size = new System.Drawing.Size(146, 200);
+            this.card19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card19.TabIndex = 18;
+            this.card19.TabStop = false;
+            this.card19.Click += new System.EventHandler(this.imageClick);
+            // 
             // card2
             // 
             this.card2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -310,6 +376,17 @@
             this.card2.TabIndex = 1;
             this.card2.TabStop = false;
             this.card2.Click += new System.EventHandler(this.imageClick);
+            // 
+            // card18
+            // 
+            this.card18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card18.Location = new System.Drawing.Point(278, 550);
+            this.card18.Name = "card18";
+            this.card18.Size = new System.Drawing.Size(146, 200);
+            this.card18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card18.TabIndex = 17;
+            this.card18.TabStop = false;
+            this.card18.Click += new System.EventHandler(this.imageClick);
             // 
             // card3
             // 
@@ -324,6 +401,17 @@
             this.card3.TabStop = false;
             this.card3.Click += new System.EventHandler(this.imageClick);
             // 
+            // card17
+            // 
+            this.card17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card17.Location = new System.Drawing.Point(109, 550);
+            this.card17.Name = "card17";
+            this.card17.Size = new System.Drawing.Size(146, 200);
+            this.card17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card17.TabIndex = 16;
+            this.card17.TabStop = false;
+            this.card17.Click += new System.EventHandler(this.imageClick);
+            // 
             // card4
             // 
             this.card4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -336,6 +424,17 @@
             this.card4.TabIndex = 3;
             this.card4.TabStop = false;
             this.card4.Click += new System.EventHandler(this.imageClick);
+            // 
+            // card16
+            // 
+            this.card16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card16.Location = new System.Drawing.Point(1282, 323);
+            this.card16.Name = "card16";
+            this.card16.Size = new System.Drawing.Size(146, 200);
+            this.card16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card16.TabIndex = 15;
+            this.card16.TabStop = false;
+            this.card16.Click += new System.EventHandler(this.imageClick);
             // 
             // card5
             // 
@@ -350,6 +449,17 @@
             this.card5.TabStop = false;
             this.card5.Click += new System.EventHandler(this.imageClick);
             // 
+            // card15
+            // 
+            this.card15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card15.Location = new System.Drawing.Point(1112, 323);
+            this.card15.Name = "card15";
+            this.card15.Size = new System.Drawing.Size(146, 200);
+            this.card15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card15.TabIndex = 14;
+            this.card15.TabStop = false;
+            this.card15.Click += new System.EventHandler(this.imageClick);
+            // 
             // card6
             // 
             this.card6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -362,6 +472,17 @@
             this.card6.TabIndex = 5;
             this.card6.TabStop = false;
             this.card6.Click += new System.EventHandler(this.imageClick);
+            // 
+            // card14
+            // 
+            this.card14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card14.Location = new System.Drawing.Point(948, 323);
+            this.card14.Name = "card14";
+            this.card14.Size = new System.Drawing.Size(146, 200);
+            this.card14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card14.TabIndex = 13;
+            this.card14.TabStop = false;
+            this.card14.Click += new System.EventHandler(this.imageClick);
             // 
             // card7
             // 
@@ -376,6 +497,17 @@
             this.card7.TabStop = false;
             this.card7.Click += new System.EventHandler(this.imageClick);
             // 
+            // card13
+            // 
+            this.card13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card13.Location = new System.Drawing.Point(781, 323);
+            this.card13.Name = "card13";
+            this.card13.Size = new System.Drawing.Size(146, 200);
+            this.card13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card13.TabIndex = 12;
+            this.card13.TabStop = false;
+            this.card13.Click += new System.EventHandler(this.imageClick);
+            // 
             // card8
             // 
             this.card8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -389,6 +521,17 @@
             this.card8.TabStop = false;
             this.card8.Click += new System.EventHandler(this.imageClick);
             // 
+            // card12
+            // 
+            this.card12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card12.Location = new System.Drawing.Point(615, 323);
+            this.card12.Name = "card12";
+            this.card12.Size = new System.Drawing.Size(146, 200);
+            this.card12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card12.TabIndex = 11;
+            this.card12.TabStop = false;
+            this.card12.Click += new System.EventHandler(this.imageClick);
+            // 
             // card9
             // 
             this.card9.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -399,17 +542,6 @@
             this.card9.TabIndex = 8;
             this.card9.TabStop = false;
             this.card9.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card10
-            // 
-            this.card10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card10.Location = new System.Drawing.Point(278, 323);
-            this.card10.Name = "card10";
-            this.card10.Size = new System.Drawing.Size(146, 200);
-            this.card10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card10.TabIndex = 9;
-            this.card10.TabStop = false;
-            this.card10.Click += new System.EventHandler(this.imageClick);
             // 
             // card11
             // 
@@ -422,148 +554,16 @@
             this.card11.TabStop = false;
             this.card11.Click += new System.EventHandler(this.imageClick);
             // 
-            // card12
+            // card10
             // 
-            this.card12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card12.Location = new System.Drawing.Point(615, 323);
-            this.card12.Name = "card12";
-            this.card12.Size = new System.Drawing.Size(146, 200);
-            this.card12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card12.TabIndex = 11;
-            this.card12.TabStop = false;
-            this.card12.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card13
-            // 
-            this.card13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card13.Location = new System.Drawing.Point(781, 323);
-            this.card13.Name = "card13";
-            this.card13.Size = new System.Drawing.Size(146, 200);
-            this.card13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card13.TabIndex = 12;
-            this.card13.TabStop = false;
-            this.card13.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card14
-            // 
-            this.card14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card14.Location = new System.Drawing.Point(948, 323);
-            this.card14.Name = "card14";
-            this.card14.Size = new System.Drawing.Size(146, 200);
-            this.card14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card14.TabIndex = 13;
-            this.card14.TabStop = false;
-            this.card14.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card15
-            // 
-            this.card15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card15.Location = new System.Drawing.Point(1112, 323);
-            this.card15.Name = "card15";
-            this.card15.Size = new System.Drawing.Size(146, 200);
-            this.card15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card15.TabIndex = 14;
-            this.card15.TabStop = false;
-            this.card15.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card16
-            // 
-            this.card16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card16.Location = new System.Drawing.Point(1282, 323);
-            this.card16.Name = "card16";
-            this.card16.Size = new System.Drawing.Size(146, 200);
-            this.card16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card16.TabIndex = 15;
-            this.card16.TabStop = false;
-            this.card16.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card17
-            // 
-            this.card17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card17.Location = new System.Drawing.Point(109, 550);
-            this.card17.Name = "card17";
-            this.card17.Size = new System.Drawing.Size(146, 200);
-            this.card17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card17.TabIndex = 16;
-            this.card17.TabStop = false;
-            this.card17.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card18
-            // 
-            this.card18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card18.Location = new System.Drawing.Point(278, 550);
-            this.card18.Name = "card18";
-            this.card18.Size = new System.Drawing.Size(146, 200);
-            this.card18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card18.TabIndex = 17;
-            this.card18.TabStop = false;
-            this.card18.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card19
-            // 
-            this.card19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card19.Location = new System.Drawing.Point(447, 550);
-            this.card19.Name = "card19";
-            this.card19.Size = new System.Drawing.Size(146, 200);
-            this.card19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card19.TabIndex = 18;
-            this.card19.TabStop = false;
-            this.card19.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card20
-            // 
-            this.card20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card20.Location = new System.Drawing.Point(615, 550);
-            this.card20.Name = "card20";
-            this.card20.Size = new System.Drawing.Size(146, 200);
-            this.card20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card20.TabIndex = 19;
-            this.card20.TabStop = false;
-            this.card20.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card21
-            // 
-            this.card21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card21.Location = new System.Drawing.Point(781, 550);
-            this.card21.Name = "card21";
-            this.card21.Size = new System.Drawing.Size(146, 200);
-            this.card21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card21.TabIndex = 20;
-            this.card21.TabStop = false;
-            this.card21.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card22
-            // 
-            this.card22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card22.Location = new System.Drawing.Point(948, 550);
-            this.card22.Name = "card22";
-            this.card22.Size = new System.Drawing.Size(146, 200);
-            this.card22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card22.TabIndex = 21;
-            this.card22.TabStop = false;
-            this.card22.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card23
-            // 
-            this.card23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card23.Location = new System.Drawing.Point(1112, 550);
-            this.card23.Name = "card23";
-            this.card23.Size = new System.Drawing.Size(146, 200);
-            this.card23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card23.TabIndex = 22;
-            this.card23.TabStop = false;
-            this.card23.Click += new System.EventHandler(this.imageClick);
-            // 
-            // card24
-            // 
-            this.card24.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.card24.Location = new System.Drawing.Point(1282, 550);
-            this.card24.Name = "card24";
-            this.card24.Size = new System.Drawing.Size(146, 200);
-            this.card24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.card24.TabIndex = 23;
-            this.card24.TabStop = false;
-            this.card24.Click += new System.EventHandler(this.imageClick);
+            this.card10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.card10.Location = new System.Drawing.Point(278, 323);
+            this.card10.Name = "card10";
+            this.card10.Size = new System.Drawing.Size(146, 200);
+            this.card10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.card10.TabIndex = 9;
+            this.card10.TabStop = false;
+            this.card10.Click += new System.EventHandler(this.imageClick);
             // 
             // MemoryCardGame
             // 
@@ -605,30 +605,30 @@
             this.Load += new System.EventHandler(this.MemoryCardGame_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.card1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.card23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.card24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.card10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

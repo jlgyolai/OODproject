@@ -80,42 +80,49 @@ namespace Object_Oriented_Design_Project
         #region card backs
         static public Image getCardBackImage()
         {
-            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\back.png");
+            Image ReturnVal = Properties.Resources.back;
 
             return ReturnVal;
         }
 
         static public Image getCardBackImageEyes()
         {
-            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\eyes.jpg");
+            Image ReturnVal = Properties.Resources.eyes;
 
             return ReturnVal;
         }
 
         static public Image getCardBackImageGoldenFlower()
         {
-            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\goldenFlower.jpg");
+            Image ReturnVal = Properties.Resources.goldenFlower;
 
             return ReturnVal;
         }
 
         static public Image getCardBackImageOwls()
         {
-            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\owls.jpg");
+            Image ReturnVal = Properties.Resources.owls;
 
             return ReturnVal;
         }
 
         static public Image getCardBackImageSnakesRed()
         {
-            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakesRed.jpg");
+            Image ReturnVal = Properties.Resources.snakesRed;
 
             return ReturnVal;
         }
 
         static public Image getCardBackImageSnakes()
         {
-            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakes.jpg");
+            Image ReturnVal = Properties.Resources.snakes;
+
+            return ReturnVal;
+        }
+
+        static public Image getCardBackImageDragonsBlue()
+        {
+            Image ReturnVal = Properties.Resources.dragonsBlue;
 
             return ReturnVal;
         }

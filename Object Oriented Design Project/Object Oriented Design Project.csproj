@@ -112,7 +112,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Images\dragonsBlue.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Images\2_of_clubs.png" />
   </ItemGroup>
@@ -295,6 +297,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\valley.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\eyes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\goldenFlower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\owls.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\snakes.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\snakesRed.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
