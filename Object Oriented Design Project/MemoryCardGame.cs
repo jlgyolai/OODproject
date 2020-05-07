@@ -14,71 +14,15 @@ namespace Object_Oriented_Design_Project
     {
         #region fields
         //fields
-        bool gameOn = false;
         int timeLeft = 0;
-        List<Image> cardList = new List<Image>();
-        Random random = new Random();
         PictureBox[] cardGrid = new PictureBox[24];
+        Image unflipped = Properties.Resources.back;
         //first and second chosen cards
         PictureBox firstImage; 
         PictureBox secondImage;
 
         #endregion
 
-        //method to add cards to cards list
-        #region addCards
-        public void addCards()
-        {
-            Image jackCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_hearts.png"); 
-            cardList.Add(jackCard);
-            Image jackCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_hearts.png");
-            cardList.Add(jackCard2);
-            Image queenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
-            cardList.Add(queenCard);
-            Image queenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
-            cardList.Add(queenCard2);
-            Image kingCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
-            cardList.Add(kingCard);
-            Image kingCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
-            cardList.Add(kingCard2);
-            Image twoCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
-            cardList.Add(twoCard);
-            Image twoCard2= Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
-            cardList.Add(twoCard2);
-            Image threeCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
-            cardList.Add(threeCard);
-            Image threeCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
-            cardList.Add(threeCard2);
-            Image fourCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png");
-            cardList.Add(fourCard);
-            Image fourCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png"); ;
-            cardList.Add(fourCard2);
-            Image fiveCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\5_of_clubs.png");
-            cardList.Add(fiveCard);
-            Image fiveCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\5_of_clubs.png");
-            cardList.Add(fiveCard2);
-            Image sixCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\6_of_clubs.png");
-            cardList.Add(sixCard);
-            Image sixCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\6_of_clubs.png");
-            cardList.Add(sixCard2);
-            Image sevenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\7_of_clubs.png");
-            cardList.Add(sevenCard);
-            Image sevenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\7_of_clubs.png");
-            cardList.Add(sevenCard2);
-            Image eightCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
-            cardList.Add(eightCard);
-            Image eightCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
-            cardList.Add(eightCard2);
-            Image nineCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
-            cardList.Add(nineCard);
-            Image nineCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
-            cardList.Add(nineCard2);
-            Image tenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
-            cardList.Add(tenCard);
-            Image tenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
-            cardList.Add(tenCard2);
-        }
-        #endregion
 
         //wallpapers for memory game
         #region Wallpapers
@@ -89,75 +33,42 @@ namespace Object_Oriented_Design_Project
         Image park = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\park.jpg");
         #endregion
 
-        //cards for the memory game
-
-        Image unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\back.png");
-
-        #region edits for cards NOT USED
-        /*
-        Image jackCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
-        Image queenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\queen_of_clubs.png");
-        Image kingCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\king_of_clubs.png");
-        Image twoCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
-        Image threeCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
-        Image fourCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png");
-        Image fiveCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\5_of_clubs.png");
-        Image sixCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\6_of_clubs.png");
-        Image sevenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\7_of_clubs.png");
-        Image eightCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
-        Image nineCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
-        Image tenCard = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
-
-        Image jackCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
-        Image queenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
-        Image kingCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\jack_of_clubs.png");
-        Image twoCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\2_of_clubs.png");
-        Image threeCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\3_of_clubs.png");
-        Image fourCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\4_of_clubs.png");
-        Image fiveCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\5_of_clubs.png");
-        Image sixCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\6_of_clubs.png");
-        Image sevenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\7_of_clubs.png");
-        Image eightCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\8_of_clubs.png");
-        Image nineCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\9_of_clubs.png");
-        Image tenCard2 = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\10_of_clubs.png");
-        */
-        #endregion
 
         public MemoryCardGame()
         {
             InitializeComponent();
-            addCards();
-            //randomizeCards();
+
         }
+
 
         //method to clear the cards and show the unflipped image
         #region clearCards
         public void clearCards()
         {
-            card1.BackgroundImage = unflipped;
-            card2.BackgroundImage = unflipped;
-            card3.BackgroundImage = unflipped;
-            card4.BackgroundImage = unflipped;
-            card5.BackgroundImage = unflipped;
-            card6.BackgroundImage = unflipped;
-            card7.BackgroundImage = unflipped;
-            card8.BackgroundImage = unflipped;
-            card9.BackgroundImage = unflipped;
-            card10.BackgroundImage = unflipped;
-            card11.BackgroundImage = unflipped;
-            card12.BackgroundImage = unflipped;
-            card13.BackgroundImage = unflipped;
-            card14.BackgroundImage = unflipped;
-            card15.BackgroundImage = unflipped;
-            card16.BackgroundImage = unflipped;
-            card17.BackgroundImage = unflipped;
-            card18.BackgroundImage = unflipped;
-            card19.BackgroundImage = unflipped;
-            card20.BackgroundImage = unflipped;
-            card21.BackgroundImage = unflipped;
-            card22.BackgroundImage = unflipped;
-            card23.BackgroundImage = unflipped;
-            card24.BackgroundImage = unflipped;
+            card1.Image = unflipped;
+            card2.Image = unflipped;
+            card3.Image = unflipped;
+            card4.Image = unflipped;
+            card5.Image = unflipped;
+            card6.Image = unflipped;
+            card7.Image = unflipped;
+            card8.Image = unflipped;
+            card9.Image = unflipped;
+            card10.Image = unflipped;
+            card11.Image = unflipped;
+            card12.Image = unflipped;
+            card13.Image = unflipped;
+            card14.Image = unflipped;
+            card15.Image = unflipped;
+            card16.Image = unflipped;
+            card17.Image = unflipped;
+            card18.Image = unflipped;
+            card19.Image = unflipped;
+            card20.Image = unflipped;
+            card21.Image = unflipped;
+            card22.Image = unflipped;
+            card23.Image = unflipped;
+            card24.Image = unflipped;
         }
         #endregion
 
@@ -206,70 +117,26 @@ namespace Object_Oriented_Design_Project
                     return unflipped;
             }       
         }
+
+        //method for new game
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //when clicking new game from the drop down menu
             //clear the cards/flip them over to only show back
             clearCards();
-            //randomize cards
-
-            //set up the timer
-
             var memorygametimer = new Timer();
             memorygametimer.Interval = 60;
 
             timeLeft = 60;
-            Timer.Text = "60 seconds";
+            Timer.Text = "Time: 60 seconds";
             timer1.Start();
 
-            //set the game to ready
-            gameOn = true;
-            //start the game
-            playGame();
-        }
-
-        private void playGame()
-        {
-            //game code
-
-            if(gameOn==false)
+            for (int i = 0; i < 24; i++)
             {
-                MessageBox.Show("Please start a new game from the menu.");
+                cardGrid[i].Enabled = true;
             }
-            else
-            {
-                //
-            }
+
         }
-        /*
-        //randomize cards and place them onto the board
-        #region randomizeCards
-        private void randomizeCards()
-        {
-            PictureBox newCard;
-            int randomNo;
-            
-
-            for(int i = 0; i < 23; i++)
-            {
-                if(cardsGrid[i] is PictureBox)
-                {
-                    newCard = (PictureBox)tableLayoutPanel1.Controls[i];
-                }
-                else
-                {
-                    continue;
-                }
-                randomNo = random.Next(0, 23);
-
-                newCard.BackgroundImage = cardList[randomNo];
-
-                cardList.RemoveAt(randomNo);
-            }
-        }
-        
-        #endregion
-        */
 
         //timer method
         #region timerTick
@@ -284,7 +151,11 @@ namespace Object_Oriented_Design_Project
             {
                 timer1.Stop();
                 Timer.Text = "Time: 0 seconds";
-                gameOn = false;
+                MessageBox.Show("Time is up! Game over!");
+                for(int i = 0; i < 24; i++)
+                {
+                    cardGrid[i].Enabled = false;
+                }
 
             }
         }
@@ -326,9 +197,8 @@ namespace Object_Oriented_Design_Project
 
         private void MemoryCardGame_Load(object sender, EventArgs e)
         {
-            
-
             //assign card pictureboxes to a control
+            #region card assignment
             cardGrid[0] = card1;
             cardGrid[1] = card2;
             cardGrid[2] = card3;
@@ -353,20 +223,23 @@ namespace Object_Oriented_Design_Project
             cardGrid[21] = card22;
             cardGrid[22] = card23;
             cardGrid[23] = card24;
+            #endregion
 
             //make the picture boxes visible and set the default card theme
-            for(int i = 0; i <24; i++)
+            for (int i = 0; i < 24; i++)
             {
                 cardGrid[i].Visible = true;
                 cardGrid[i].Image = Card.getCardBackImage();
             }
+            var memorygametimer = new Timer();
+            memorygametimer.Interval = 60;
+
+            timeLeft = 60;
+            Timer.Text = "60 seconds";
+            timer1.Start();
         }
 
-        private void imageClick(object sender, EventArgs e)
-        {
-
-        }
-
+        //methods to change the deck themes
         #region Card Themes
         private void eyesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -438,5 +311,617 @@ namespace Object_Oriented_Design_Project
             }
         }
         #endregion
+
+        //methods to manage the click events for the game
+        #region card click events
+        private void card1_Click(object sender, EventArgs e)
+        {
+            card1.Image = Properties.Resources._4_of_clubs;
+            if(firstImage == null)
+            {
+                firstImage = card1;
+            }
+            else if(firstImage != null && secondImage == null)
+            {
+                secondImage = card1;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card1.Enabled = false;
+                    card20.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            } 
+        }
+
+        private void card2_Click(object sender, EventArgs e)
+        {
+            card2.Image = Properties.Resources._7_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card2;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card2;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card2.Enabled = false;
+                    card16.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+        
+        private void card3_Click(object sender, EventArgs e)
+        {
+            card3.Image = Properties.Resources.jack_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card3;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card3;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card3.Enabled = false;
+                    card21.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+        
+        private void card4_Click(object sender, EventArgs e)
+        {
+            card4.Image = Properties.Resources.queen_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card4;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card4;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card23.Enabled = false;
+                    card4.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card5_Click(object sender, EventArgs e)
+        {
+            card5.Image = Properties.Resources._2_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card5;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card5;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card5.Enabled = false;
+                    card24.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card6_Click(object sender, EventArgs e)
+        {
+            card6.Image = Properties.Resources._6_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card6;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card6;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card12.Enabled = false;
+                    card6.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card7_Click(object sender, EventArgs e)
+        {
+            card7.Image = Properties.Resources._3_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card7;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card7;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card7.Enabled = false;
+                    card11.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card8_Click(object sender, EventArgs e)
+        {
+            card8.Image = Properties.Resources._5_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card8;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card8;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card8.Enabled = false;
+                    card17.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card9_Click(object sender, EventArgs e)
+        {
+            card9.Image = Properties.Resources._9_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card9;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card9;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card9.Enabled = false;
+                    card14.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card10_Click(object sender, EventArgs e)
+        {
+            card10.Image = Properties.Resources._10_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card10;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card10;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card18.Enabled = false;
+                    card10.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card11_Click(object sender, EventArgs e)
+        {
+            card11.Image = Properties.Resources._3_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card11;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card11;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card11.Enabled = false;
+                    card7.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card12_Click(object sender, EventArgs e)
+        {
+            card12.Image = Properties.Resources._6_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card12;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card12;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card6.Enabled = false;
+                    card12.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card13_Click(object sender, EventArgs e)
+        {
+            card13.Image = Properties.Resources.king_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card13;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card13;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card13.Enabled = false;
+                    card22.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card14_Click(object sender, EventArgs e)
+        {
+            card14.Image = Properties.Resources._9_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card14;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card14;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card9.Enabled = false;
+                    card14.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card15_Click(object sender, EventArgs e)
+        {
+            card15.Image = Properties.Resources._8_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card15;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card15;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card15.Enabled = false;
+                    card19.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card16_Click(object sender, EventArgs e)
+        {
+            card16.Image = Properties.Resources._7_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card16;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card16;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card2.Enabled = false;
+                    card16.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card17_Click(object sender, EventArgs e)
+        {
+            card17.Image = Properties.Resources._5_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card17;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card17;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card17.Enabled = false;
+                    card8.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card18_Click(object sender, EventArgs e)
+        {
+            card18.Image = Properties.Resources._10_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card18;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card18;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card10.Enabled = false;
+                    card18.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card19_Click(object sender, EventArgs e)
+        {
+            card19.Image = Properties.Resources._8_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card19;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card19;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card19.Enabled = false;
+                    card15.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card20_Click(object sender, EventArgs e)
+        {
+            card20.Image = Properties.Resources._4_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card20;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card20;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card1.Enabled = false;
+                    card20.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card21_Click(object sender, EventArgs e)
+        {
+            card21.Image = Properties.Resources.jack_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card21;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card21;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card21.Enabled = false;
+                    card3.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card22_Click(object sender, EventArgs e)
+        {
+            card22.Image = Properties.Resources.king_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card22;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card22;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card13.Enabled = false;
+                    card22.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card23_Click(object sender, EventArgs e)
+        {
+            card23.Image = Properties.Resources.queen_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card23;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card23;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card23.Enabled = false;
+                    card4.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+
+        private void card24_Click(object sender, EventArgs e)
+        {
+            card24.Image = Properties.Resources._2_of_clubs;
+            if (firstImage == null)
+            {
+                firstImage = card24;
+            }
+            else if (firstImage != null && secondImage == null)
+            {
+                secondImage = card24;
+            }
+            if (firstImage != null && secondImage != null)
+            {
+                if (firstImage.Tag == secondImage.Tag)
+                {
+                    firstImage = null;
+                    secondImage = null;
+                    card5.Enabled = false;
+                    card24.Enabled = false;
+                }
+                else
+                    timer2.Start();
+            }
+        }
+        #endregion
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Stop();
+            firstImage.Image = unflipped;
+            secondImage.Image = unflipped;
+            firstImage = null;
+            secondImage = null;
+        }
     }
 }
