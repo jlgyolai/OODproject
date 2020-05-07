@@ -124,7 +124,8 @@
             this.Controls.Add(this.textBoxMemory);
             this.Controls.Add(this.textBoxWar);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -537,6 +537,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MemoryCardGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemoryCardGame";
             this.Load += new System.EventHandler(this.MemoryCardGame_Load);
             this.menuStrip1.ResumeLayout(false);

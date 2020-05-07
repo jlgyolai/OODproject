@@ -306,6 +306,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "War";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "War: The Card Game";
             this.Load += new System.EventHandler(this.War_Load);
             this.menuStrip1.ResumeLayout(false);
