@@ -230,7 +230,7 @@ namespace Object_Oriented_Design_Project
                 //
             }
         }
-
+        /*
         //randomize cards and place them onto the board
         #region randomizeCards
         private void randomizeCards()
@@ -256,7 +256,9 @@ namespace Object_Oriented_Design_Project
                 cardList.RemoveAt(randomNo);
             }
         }
+        
         #endregion
+        */
 
         //timer method
         #region timerTick
@@ -320,5 +322,48 @@ namespace Object_Oriented_Design_Project
         {
 
         }
+
+        #region Card Themes
+        private void eyesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\eyes.jpg");
+            clearCards();
+        }
+
+        private void goldenFlowerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\goldenFlower.jpg");
+            clearCards();
+        }
+
+        private void owlsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\owls.jpg");
+            clearCards();
+        }
+
+        private void snakesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakes.jpg");
+            clearCards();
+        }
+
+        private void redSnakesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakesRed.jpg");
+            clearCards();
+        }
+
+        private void blueDragonsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\dragonsBlue.png");
+            clearCards();
+        }
+
+        private void defaultToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            unflipped = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\back.png");
+        }
+        #endregion
     }
 }
