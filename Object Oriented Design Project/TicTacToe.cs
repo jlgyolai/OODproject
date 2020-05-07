@@ -18,6 +18,7 @@ namespace Object_Oriented_Design_Project
         //win counts for each player
         int p1wins = 0;
         int p2wins = 0;
+        int turnCount = 0;
         #endregion
 
         public TicTacToe()
@@ -55,6 +56,15 @@ namespace Object_Oriented_Design_Project
             else if ((button3.Text == button5.Text) && (button5.Text == button7.Text) && (button3.Text != ""))
                gameOver = true;
             
+            //if all buttons are pressed and doesn't meet any of the horizontal, vertical, or diagonal cases
+            //result is stalemate
+            if((turnCount == 9) && (gameOver == false))
+            {
+                MessageBox.Show("Stalemate! Better luck next time.");
+                disableAllButtons();
+            }
+
+            //once game over is determined, tally the winner
             if(gameOver)
             {
                 //game is over, disable all tictactoe buttons
@@ -136,6 +146,7 @@ namespace Object_Oriented_Design_Project
             Button mouseEnter = sender as Button;
             mouseEnter.BackColor = Color.SandyBrown;
         }
+       
         //highlight effect when mouse leaves button area of operation
         private void button_MouseLeave(object sender, EventArgs e)
         {
@@ -160,12 +171,24 @@ namespace Object_Oriented_Design_Project
             }
             //disable the button to prevent changing the char
             btn.Enabled = false;
+            playerTurn.Text = whosTurn(turnCount);
+            turnCount++;
             gameLogic();
             //change the myTurn bool after game logic to prevent the wrong player winning
             myTurn = !myTurn;
             
         }
 
+        //method to determine the player turn to display in playerTurn Label
+        private string whosTurn(int turnCount)
+        {
+            
+            if((turnCount != 0) && (turnCount != 2) && (turnCount != 4) && (turnCount != 6) && (turnCount != 8) && (turnCount < 10))
+                return "TURN: Player 1";
+            else
+                return "TURN: Player 2";
+        }
+       
         //method to disable all buttons
         private void disableAllButtons()
         {
@@ -200,6 +223,8 @@ namespace Object_Oriented_Design_Project
             clearBoard();
             enableAllButtons();
             myTurn = true;
+            turnCount = 0;
+            playerTurn.Text = "TURN: Player 1";
         }
 
         //clears the board from the previous game; creates a fresh board

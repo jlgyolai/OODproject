@@ -52,6 +52,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.p1w = new System.Windows.Forms.Label();
             this.p2w = new System.Windows.Forms.Label();
+            this.playerTurn = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -339,12 +340,23 @@
             this.p2w.TabIndex = 4;
             this.p2w.Text = "Player 2 Wins:";
             // 
+            // playerTurn
+            // 
+            this.playerTurn.AutoSize = true;
+            this.playerTurn.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerTurn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.playerTurn.Location = new System.Drawing.Point(12, 62);
+            this.playerTurn.Name = "playerTurn";
+            this.playerTurn.Size = new System.Drawing.Size(0, 39);
+            this.playerTurn.TabIndex = 5;
+            // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.playerTurn);
             this.Controls.Add(this.p2w);
             this.Controls.Add(this.p1w);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -388,5 +400,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label playerTurn;
     }
 }
