@@ -67,7 +67,7 @@ namespace Object_Oriented_Design_Project
             string filename = string.Concat(Name_0, Name_1, Name_2, Name_3, Name_4);
             Assembly assembly = Assembly.GetExecutingAssembly();
             Image ReturnVal;
-            Size size = new Size(146, 200);
+            Size size = new Size(222, 323);
             using (Stream stream = assembly.GetManifestResourceStream(filename))
             {
                 ReturnVal = (Image)new Bitmap(Image.FromStream(stream), size);
@@ -77,17 +77,49 @@ namespace Object_Oriented_Design_Project
         }
 
         //returns the back image.png of the card
+        #region card backs
         static public Image getCardBackImage()
         {
-            const string filename = @"Object Oriented Design Project.Images.back.png";
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            Image ReturnVal;
-            using (Stream stream = assembly.GetManifestResourceStream(filename))
-            {
-                ReturnVal = Image.FromStream(stream);
-            }
+            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\back.png");
+
             return ReturnVal;
         }
+
+        static public Image getCardBackImageEyes()
+        {
+            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\eyes.jpg");
+
+            return ReturnVal;
+        }
+
+        static public Image getCardBackImageGoldenFlower()
+        {
+            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\goldenFlower.jpg");
+
+            return ReturnVal;
+        }
+
+        static public Image getCardBackImageOwls()
+        {
+            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\owls.jpg");
+
+            return ReturnVal;
+        }
+
+        static public Image getCardBackImageSnakesRed()
+        {
+            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakesRed.jpg");
+
+            return ReturnVal;
+        }
+
+        static public Image getCardBackImageSnakes()
+        {
+            Image ReturnVal = Image.FromFile(@"C:\Users\Justin Gyolai\source\repos\OODproject\Object Oriented Design Project\Images\snakes.jpg");
+
+            return ReturnVal;
+        }
+        #endregion
 
         //card's face field
         //determines the card's front image.

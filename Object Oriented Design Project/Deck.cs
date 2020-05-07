@@ -26,6 +26,7 @@ namespace Object_Oriented_Design_Project
                     }
                 }
             }
+            shuffleDeck();
         }
 
         public void shuffleDeck()
