@@ -11,7 +11,7 @@ namespace Object_Oriented_Design_Project
 {
     public class Card
     {
-        private int _deckNo = 0;
+        
         private int _valueOf = 2;
         private int _suit = 0;
         private int _face = 1;
@@ -35,12 +35,12 @@ namespace Object_Oriented_Design_Project
          */
             
         //creates a unique instance of a card
-        public Card(int setFace, int setSuit, int setDeck)
+        public Card(int setFace, int setSuit)
         {
             Face = setFace;
             ValueOf = setFace;
             Suit = setSuit;
-            DeckNo = setDeck;
+            
         }
 
         //depending on the card, the proper image.png is returned for the card's front
@@ -192,22 +192,7 @@ namespace Object_Oriented_Design_Project
             get { return _suit; }
         }
 
-        //DeckNo field. Number of decks in circulation. Might not need, but added just in case we wanted infinite card combos in
-        //memory card game since single deck is irrelevant. Might make War a 2 deck game.
-        public int DeckNo
-        {
-            set
-            {
-                if(value >= 0)
-                {
-                    _deckNo = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("Deck number can't be negative.", (Exception)null);
-                }
-            }
-            get { return _deckNo; }
-        }
-    }
+
+    } 
 }
+

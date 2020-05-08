@@ -14,11 +14,13 @@ namespace Object_Oriented_Design_Project
     {
         //fields for the war game
         static Deck theDeck = new Deck();
-        Dealer theDealer = new Dealer(theDeck);
-        Player thePlayer = new Player(theDeck);
+        private Player theDealer;
+        private Player thePlayer;
         int playerCardCount = 0;
         int playerCardVisible = 0;
         int dealerCardVisible = 0;
+        Queue<Card> playerQcards = new Queue<Card>();
+        Queue<Card> dealerQcards = new Queue<Card>();
         PictureBox[] playerCards = new PictureBox[5];
         PictureBox[] dealerCards = new PictureBox[5];
         bool isGameOver = false;
@@ -26,27 +28,6 @@ namespace Object_Oriented_Design_Project
         public War()
         {
             InitializeComponent();
-        }
-
-        //method for closing the app and returning to main menu
-        private void WarExit_Click(object sender, EventArgs e)
-        {
-            //Close this form when done with it
-            this.Hide();
-            var newForm = new MainMenu();
-            newForm.FormClosed += (s, args) => this.Close();
-            newForm.Show();
-        }
-
-        //method for button highlight
-        private void WarExit_MouseEnter(object sender, EventArgs e)
-        {
-            WarExit.BackColor = Color.Olive;
-        }
-
-        private void WarExit_MouseLeave(object sender, EventArgs e)
-        {
-            WarExit.BackColor = Color.OliveDrab;
         }
 
         private void War_Load(object sender, EventArgs e)
@@ -69,12 +50,29 @@ namespace Object_Oriented_Design_Project
             playerCards[0].Image = Card.getCardBackImage();
             dealerCards[0].Visible = true;
             dealerCards[0].Image = Card.getCardBackImage();
-            /*
-            for(int counter = 0; counter <5, counter++)
+
+            btnBattle.Enabled = true;
+            WarExit.Enabled = true;
+
+            Deck theDeck = new Deck();
+
+
+            for(int i = 26; i < 26; i++)
             {
-                playerCards[counter].Visible();
+                Card ptemp = theDeck.drawCard();
+                Card dtemp = theDeck.drawCard();
+                playerQcards.Enqueue(ptemp);
+                dealerQcards.Enqueue(dtemp);
             }
-            */
+
+            Card pTempCard = playerQcards.Dequeue();
+            playerCard.Image = pTempCard.cardFront();
+
+        }
+
+        private void dealCards()
+        {
+
         }
 
         private void newGameToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -98,6 +96,8 @@ namespace Object_Oriented_Design_Project
                 dealerCards[counter].Visible = true;
                 dealerCards[counter].Image = Card.getCardBackImage();
             }
+
+            /*
             for (int counter = 2; counter < 5; counter++)
             {
                 playerCards[counter].Visible = false;
@@ -105,6 +105,7 @@ namespace Object_Oriented_Design_Project
                 dealerCards[counter].Visible = false;
                 dealerCards[counter].Image = Card.getCardBackImage();
             }
+            */
         }
 
 
@@ -255,5 +256,27 @@ namespace Object_Oriented_Design_Project
                 "for the Object Oriented Design Course \n" +
                 "at Dakota State University Spring 2020.");
         }
+
+        //method for closing the app and returning to main menu
+        private void WarExit_Click(object sender, EventArgs e)
+        {
+            //Close this form when done with it
+            this.Hide();
+            var newForm = new MainMenu();
+            newForm.FormClosed += (s, args) => this.Close();
+            newForm.Show();
+        }
+
+        //method for button highlight
+        private void WarExit_MouseEnter(object sender, EventArgs e)
+        {
+            WarExit.BackColor = Color.Olive;
+        }
+
+        private void WarExit_MouseLeave(object sender, EventArgs e)
+        {
+            WarExit.BackColor = Color.OliveDrab;
+        }
+
     }
 }

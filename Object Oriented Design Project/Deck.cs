@@ -6,40 +6,43 @@ using System.Threading.Tasks;
 
 namespace Object_Oriented_Design_Project
 {
-    public class Deck
+    public static class Deck
     {
-        private const int decks = 1; //amount of decks to be used
-
-        private List<Card> deck = new List<Card>();
-        private HashSet<Card> shuffledCards = new HashSet<Card>();
-
-        public Deck()
+        public static Queue<Card> newDeck()
         {
-            deck.Clear();
-            for(int deckNo = 0; deckNo < decks; deckNo++)
+            Queue<Card> theDeck = new Queue<Card>();
+            for(int suit = 0; suit < 4; suit++)
             {
-                for(int suit = 0; suit < 4; suit++)
+                for(int face = 1; face <14; face++)
                 {
-                    for(int face = 1; face <14; face++)
-                    {
-                        deck.Add(new Card(face, suit, deckNo));
-                    }
+                    theDeck.Enqueue(new Card(face, suit));
                 }
             }
-            shuffleDeck();
+            
+           return shuffleDeck(theDeck);
         }
 
-        public void shuffleDeck()
+        private static Queue<Card> shuffleDeck(Queue<Card> theDeck)
         {
-            shuffledCards.Clear();
-            Random random = new Random();
-            int getCard = random.Next() % (52 * decks);
-            while (shuffledCards.Count < (52 * decks))
+            List<Card> temp = theDeck.ToList();
+            Random random = new Random(DateTime.Now.Millisecond);
+            
+            for(int i = temp.Count -1; i > 0; --i)
             {
-                shuffledCards.Add(deck[getCard]);
-                getCard = random.Next() % (52 * decks);
+                int j = random.Next(i + 1);
+
+                Card tempCard = temp[i];
+                temp[i] = temp[j];
+                temp[j] = tempCard;
             }
-            return;
+
+            Queue<Card> shuffledDeck = new Queue<Card>();
+            foreach (var card in temp)
+            {
+                shuffledDeck.Enqueue(card);
+            }
+      
+            return shuffledDeck;
         }
 
         public Card drawCard()
