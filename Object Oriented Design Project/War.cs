@@ -13,17 +13,15 @@ namespace Object_Oriented_Design_Project
     public partial class War : Form
     {
         //fields for the war game
-        static Deck theDeck = new Deck();
         private Player theDealer;
         private Player thePlayer;
         int playerCardCount = 0;
-        int playerCardVisible = 0;
-        int dealerCardVisible = 0;
+        Image unflipped = Properties.Resources.back;
         Queue<Card> playerQcards = new Queue<Card>();
         Queue<Card> dealerQcards = new Queue<Card>();
         PictureBox[] playerCards = new PictureBox[5];
         PictureBox[] dealerCards = new PictureBox[5];
-        bool isGameOver = false;
+
 
         public War()
         {
@@ -32,6 +30,8 @@ namespace Object_Oriented_Design_Project
 
         private void War_Load(object sender, EventArgs e)
         {
+            theDealer = new Player("CPU");
+            thePlayer = new Player("You");
 
             //array for the visible cards
             playerCards[0] = playerCard;
@@ -54,112 +54,140 @@ namespace Object_Oriented_Design_Project
             btnBattle.Enabled = true;
             WarExit.Enabled = true;
 
-            Deck theDeck = new Deck();
-
-
-            for(int i = 26; i < 26; i++)
-            {
-                Card ptemp = theDeck.drawCard();
-                Card dtemp = theDeck.drawCard();
-                playerQcards.Enqueue(ptemp);
-                dealerQcards.Enqueue(dtemp);
-            }
-
-            Card pTempCard = playerQcards.Dequeue();
-            playerCard.Image = pTempCard.cardFront();
+            Queue<Card> theDeck = Deck.newDeck();
+            Queue<Card> playerDeck = theDealer.dealCards(theDeck);
+            thePlayer.playerHand = playerDeck;
+            playerCardCount = 26;
+            CardsInHand.Text = "Cards in Hand: " + playerCardCount.ToString();
 
         }
 
-        private void dealCards()
-        {
-
-        }
-
+        //method for new game in menu strip
         private void newGameToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             //when new game is selected from the menu
-
-            //shuffle the deck
-            theDeck.shuffleDeck();
-            //enable buttons
             btnBattle.Enabled = true;
-            WarExit.Enabled = true;
-            //reset the dealer and player
-            theDealer.resetDealer();
-            thePlayer.resetPlayer();
-
-            //split the deck and distribute to player and dealer
-            for (int counter = 0; counter < 2; counter++)
-            {
-                playerCards[counter].Visible = true;
-                playerCards[counter].Image = Card.getCardBackImage();
-                dealerCards[counter].Visible = true;
-                dealerCards[counter].Image = Card.getCardBackImage();
-            }
-
-            /*
-            for (int counter = 2; counter < 5; counter++)
-            {
-                playerCards[counter].Visible = false;
-                playerCards[counter].Image = Card.getCardBackImage();
-                dealerCards[counter].Visible = false;
-                dealerCards[counter].Image = Card.getCardBackImage();
-            }
-            */
+            //shuffle the deck
+            Queue<Card> theDeck = Deck.newDeck();
+            Queue<Card> playerDeck = theDealer.dealCards(theDeck);
+            thePlayer.playerHand = playerDeck;
+            playerCardCount = 26;
+            CardsInHand.Text = "Cards in Hand: " + playerCardCount.ToString();
         }
 
 
-
+        //method for battle button click
         private void battleClick(object sender, EventArgs e)
         {
-            CardsInHand.Text = string.Format("{0}", playerCardCount.ToString());
-            if (playerCardVisible < 5)
+            //used to hide the picture boxes after a skirmish
+            playerCards[1].Visible = false;
+            playerCards[2].Visible = false;
+            playerCards[3].Visible = false;
+            playerCards[4].Visible = false;
+
+            dealerCards[1].Visible = false;
+            dealerCards[2].Visible = false;
+            dealerCards[3].Visible = false;
+            dealerCards[4].Visible = false;
+
+            Queue<Card> battle = new Queue<Card>();
+            if (thePlayer.playerHand.Count > 0)
             {
-                //draw from player's hand and flip card over
+                var playercard = thePlayer.playerHand.Dequeue();
+                playerCardCount--;
+                CardsInHand.Text = "Cards in Hand: " + playerCardCount.ToString();
 
-                playerCards[playerCardVisible].Image = thePlayer.playerDraw().cardFront();
-                playerCards[playerCardVisible].Visible = true;
+                var dealercard = theDealer.playerHand.Dequeue();
 
-                //draw from dealer's hand and flip over
-                dealerCards[dealerCardVisible].Image = theDealer.getOneDealerCard().cardFront();
-                //compare face value
+                playerCard.Image = playercard.cardFront();
+                dealerCard.Image = dealercard.cardFront();
 
-                //if dealer card == player card: stalemate. Start skirmish
+                battle.Enqueue(playercard);
+                battle.Enqueue(dealercard);
 
-                //if needed: 
-                //draw four cards from player hand, flip over last
-
-                //if needed:
-                //draw four cards from dealer hand, flip over last
-
-                //compare face value of each fourth card
-
-                //highest card face value wins the skirmish.
-
-                //update player's card count
-
-                //if player's card count = 52, player wins
-                //if player's card count = 0, player loses
-                //if player's card count is 0 > x > 52, can continue play
-                if (playerCardCount == 52)
+                while (playercard.Face == dealercard.Face)
                 {
-                    MessageBox.Show("Player wins!");
-                    CardsInHand.Text = playerCardCount.ToString();
-                    isGameOver = true;
+                    if (thePlayer.playerHand.Count < 4)
+                    {
+                        thePlayer.playerHand.Clear();
+                        return;
+                    }
+                    if (theDealer.playerHand.Count < 4)
+                    {
+                        theDealer.playerHand.Clear();
+                        return;
+                    }
+
+                    battle.Enqueue(thePlayer.playerHand.Dequeue());
+                    playerCards[1].Visible = true;
+                    playerCards[1].Image = unflipped;
+                    playerCards[1].SendToBack();
+
+                    battle.Enqueue(thePlayer.playerHand.Dequeue());
+                    playerCards[2].Visible = true;
+                    playerCards[2].Image = unflipped;
+
+                    battle.Enqueue(thePlayer.playerHand.Dequeue());
+                    playerCards[3].Visible = true;
+                    playerCards[3].Image = unflipped;
+
+                    playerCardCount = playerCardCount - 3;
+                    CardsInHand.Text = "Cards in Hand: " + playerCardCount.ToString();
+
+                    battle.Enqueue(theDealer.playerHand.Dequeue());
+                    dealerCards[1].Visible = true;
+                    dealerCards[1].Image = unflipped;
+                    dealerCards[1].SendToBack();
+
+                    battle.Enqueue(theDealer.playerHand.Dequeue());
+                    dealerCards[2].Visible = true;
+                    dealerCards[2].Image = unflipped;
+
+                    battle.Enqueue(theDealer.playerHand.Dequeue());
+                    dealerCards[3].Visible = true;
+                    dealerCards[3].Image = unflipped;
+
+                    playercard = thePlayer.playerHand.Dequeue();
+                    playerCards[4].Visible = true;
+                    pWarBattle.Image = playercard.cardFront();
+                    pWarBattle.BringToFront();
+                    playerCardCount--;
+                    CardsInHand.Text = "Cards in Hand: " + playerCardCount.ToString();
+
+                    dealercard = theDealer.playerHand.Dequeue();
+                    dealerCards[4].Visible = true;
+                    dWarBattle.Image = dealercard.cardFront();
+                    dWarBattle.BringToFront();
+                    
+
+                    battle.Enqueue(playercard);
+                    battle.Enqueue(dealercard);
                 }
-                else if (playerCardCount == 0)
+                if (playercard.Face < dealercard.Face)
                 {
-                    MessageBox.Show("Dealer wins!");
-                    CardsInHand.Text = playerCardCount.ToString();
-                    isGameOver = true;
+                    theDealer.playerHand.Combine(battle);
+
                 }
                 else
                 {
-                    CardsInHand.Text = playerCardCount.ToString();
+                    playerCardCount += battle.Count;
+                    thePlayer.playerHand.Combine(battle);
                 }
-            }
-        }
 
+            }
+            else
+            {
+                MessageBox.Show("Game Over. Player ran out of Cards.");
+                btnBattle.Enabled = false;
+            }
+
+
+
+        }
+  
+
+        #region event handlers
         //methods for highlighting buttons
         private void btnBattle_MouseEnter(object sender, EventArgs e)
         {
@@ -174,77 +202,87 @@ namespace Object_Oriented_Design_Project
         //methods to change deck theme
         private void eyesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerCards[0].Image = Card.getCardBackImageEyes();
+            //playerCards[0].Image = Card.getCardBackImageEyes();
             playerCards[1].Image = Card.getCardBackImageEyes();
             playerCards[2].Image = Card.getCardBackImageEyes();
             playerCards[3].Image = Card.getCardBackImageEyes();
-            playerCards[4].Image = Card.getCardBackImageEyes();
+            //playerCards[4].Image = Card.getCardBackImageEyes();
 
-            dealerCards[0].Image = Card.getCardBackImageEyes();
+            //dealerCards[0].Image = Card.getCardBackImageEyes();
             dealerCards[1].Image = Card.getCardBackImageEyes();
             dealerCards[2].Image = Card.getCardBackImageEyes();
             dealerCards[3].Image = Card.getCardBackImageEyes();
-            dealerCards[4].Image = Card.getCardBackImageEyes();
+            //dealerCards[4].Image = Card.getCardBackImageEyes();
+
+            unflipped = Properties.Resources.eyes;
         }
 
         private void goldenFlowerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerCards[0].Image = Card.getCardBackImageGoldenFlower();
+           // playerCards[0].Image = Card.getCardBackImageGoldenFlower();
             playerCards[1].Image = Card.getCardBackImageGoldenFlower();
             playerCards[2].Image = Card.getCardBackImageGoldenFlower();
             playerCards[3].Image = Card.getCardBackImageGoldenFlower();
-            playerCards[4].Image = Card.getCardBackImageGoldenFlower();
+            //playerCards[4].Image = Card.getCardBackImageGoldenFlower();
 
-            dealerCards[0].Image = Card.getCardBackImageGoldenFlower();
+            //dealerCards[0].Image = Card.getCardBackImageGoldenFlower();
             dealerCards[1].Image = Card.getCardBackImageGoldenFlower();
             dealerCards[2].Image = Card.getCardBackImageGoldenFlower();
             dealerCards[3].Image = Card.getCardBackImageGoldenFlower();
-            dealerCards[4].Image = Card.getCardBackImageGoldenFlower();
+            //dealerCards[4].Image = Card.getCardBackImageGoldenFlower();
+
+            unflipped = Properties.Resources.goldenFlower;
         }
 
         private void owlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerCards[0].Image = Card.getCardBackImageOwls();
+           // playerCards[0].Image = Card.getCardBackImageOwls();
             playerCards[1].Image = Card.getCardBackImageOwls();
             playerCards[2].Image = Card.getCardBackImageOwls();
             playerCards[3].Image = Card.getCardBackImageOwls();
-            playerCards[4].Image = Card.getCardBackImageOwls();
+            //playerCards[4].Image = Card.getCardBackImageOwls();
 
-            dealerCards[0].Image = Card.getCardBackImageOwls();
+           //dealerCards[0].Image = Card.getCardBackImageOwls();
             dealerCards[1].Image = Card.getCardBackImageOwls();
             dealerCards[2].Image = Card.getCardBackImageOwls();
             dealerCards[3].Image = Card.getCardBackImageOwls();
-            dealerCards[4].Image = Card.getCardBackImageOwls();
+            //dealerCards[4].Image = Card.getCardBackImageOwls();
+
+            unflipped = Properties.Resources.owls;
         }
 
         private void snakesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerCards[0].Image = Card.getCardBackImageSnakes();
+            //playerCards[0].Image = Card.getCardBackImageSnakes();
             playerCards[1].Image = Card.getCardBackImageSnakes();
             playerCards[2].Image = Card.getCardBackImageSnakes();
             playerCards[3].Image = Card.getCardBackImageSnakes();
-            playerCards[4].Image = Card.getCardBackImageSnakes();
+           // playerCards[4].Image = Card.getCardBackImageSnakes();
 
-            dealerCards[0].Image = Card.getCardBackImageSnakes();
+            //dealerCards[0].Image = Card.getCardBackImageSnakes();
             dealerCards[1].Image = Card.getCardBackImageSnakes();
             dealerCards[2].Image = Card.getCardBackImageSnakes();
             dealerCards[3].Image = Card.getCardBackImageSnakes();
-            dealerCards[4].Image = Card.getCardBackImageSnakes();
+            //dealerCards[4].Image = Card.getCardBackImageSnakes();
+
+            unflipped = Properties.Resources.snakes;
         }
 
         private void redSnakesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerCards[0].Image = Card.getCardBackImageSnakesRed();
+           // playerCards[0].Image = Card.getCardBackImageSnakesRed();
             playerCards[1].Image = Card.getCardBackImageSnakesRed();
             playerCards[2].Image = Card.getCardBackImageSnakesRed();
             playerCards[3].Image = Card.getCardBackImageSnakesRed();
-            playerCards[4].Image = Card.getCardBackImageSnakesRed();
+           // playerCards[4].Image = Card.getCardBackImageSnakesRed();
 
-            dealerCards[0].Image = Card.getCardBackImageSnakesRed();
+            //dealerCards[0].Image = Card.getCardBackImageSnakesRed();
             dealerCards[1].Image = Card.getCardBackImageSnakesRed();
             dealerCards[2].Image = Card.getCardBackImageSnakesRed();
             dealerCards[3].Image = Card.getCardBackImageSnakesRed();
-            dealerCards[4].Image = Card.getCardBackImageSnakesRed();
+          //  dealerCards[4].Image = Card.getCardBackImageSnakesRed();
+
+            unflipped = Properties.Resources.snakesRed;
         }
 
         //method for information click on menu strip
@@ -278,5 +316,22 @@ namespace Object_Oriented_Design_Project
             WarExit.BackColor = Color.OliveDrab;
         }
 
+        private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //playerCards[0].Image = Card.getCardBackImage();
+            playerCards[1].Image = Card.getCardBackImage();
+            playerCards[2].Image = Card.getCardBackImage();
+            playerCards[3].Image = Card.getCardBackImage();
+           // playerCards[4].Image = Card.getCardBackImage();
+
+            //dealerCards[0].Image = Card.getCardBackImage();
+            dealerCards[1].Image = Card.getCardBackImage();
+            dealerCards[2].Image = Card.getCardBackImage();
+            dealerCards[3].Image = Card.getCardBackImage();
+           // dealerCards[4].Image = Card.getCardBackImage();
+
+            unflipped = Properties.Resources.back;
+        }
     }
+    #endregion
 }

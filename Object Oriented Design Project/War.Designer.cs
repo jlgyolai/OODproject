@@ -36,6 +36,10 @@
             this.changeDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eyesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goldenFlowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.owlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.snakesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redSnakesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playerCard = new System.Windows.Forms.PictureBox();
@@ -50,10 +54,8 @@
             this.dWarBattle = new System.Windows.Forms.PictureBox();
             this.btnBattle = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.goldenFlowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.owlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.snakesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.redSnakesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerCard)).BeginInit();
@@ -117,7 +119,7 @@
             // newGameToolStripMenuItem1
             // 
             this.newGameToolStripMenuItem1.Name = "newGameToolStripMenuItem1";
-            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.newGameToolStripMenuItem1.Text = "New Game";
             this.newGameToolStripMenuItem1.Click += new System.EventHandler(this.newGameToolStripMenuItem1_Click);
             // 
@@ -131,39 +133,70 @@
             this.snakesToolStripMenuItem,
             this.redSnakesToolStripMenuItem});
             this.changeDeckToolStripMenuItem.Name = "changeDeckToolStripMenuItem";
-            this.changeDeckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeDeckToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.changeDeckToolStripMenuItem.Text = "Change Deck";
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.defaultToolStripMenuItem.Text = "Default";
+            this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // eyesToolStripMenuItem
             // 
             this.eyesToolStripMenuItem.Name = "eyesToolStripMenuItem";
-            this.eyesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eyesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.eyesToolStripMenuItem.Text = "Eyes";
             this.eyesToolStripMenuItem.Click += new System.EventHandler(this.eyesToolStripMenuItem_Click);
+            // 
+            // goldenFlowerToolStripMenuItem
+            // 
+            this.goldenFlowerToolStripMenuItem.Name = "goldenFlowerToolStripMenuItem";
+            this.goldenFlowerToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.goldenFlowerToolStripMenuItem.Text = "Golden Flower";
+            this.goldenFlowerToolStripMenuItem.Click += new System.EventHandler(this.goldenFlowerToolStripMenuItem_Click);
+            // 
+            // owlsToolStripMenuItem
+            // 
+            this.owlsToolStripMenuItem.Name = "owlsToolStripMenuItem";
+            this.owlsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.owlsToolStripMenuItem.Text = "Owls";
+            this.owlsToolStripMenuItem.Click += new System.EventHandler(this.owlsToolStripMenuItem_Click);
+            // 
+            // snakesToolStripMenuItem
+            // 
+            this.snakesToolStripMenuItem.Name = "snakesToolStripMenuItem";
+            this.snakesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.snakesToolStripMenuItem.Text = "Snakes";
+            this.snakesToolStripMenuItem.Click += new System.EventHandler(this.snakesToolStripMenuItem_Click);
+            // 
+            // redSnakesToolStripMenuItem
+            // 
+            this.redSnakesToolStripMenuItem.Name = "redSnakesToolStripMenuItem";
+            this.redSnakesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.redSnakesToolStripMenuItem.Text = "Red Snakes";
+            this.redSnakesToolStripMenuItem.Click += new System.EventHandler(this.redSnakesToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.WarExit_Click);
             // 
             // playerCard
             // 
             this.playerCard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.playerCard.BackColor = System.Drawing.Color.White;
+            this.playerCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerCard.Location = new System.Drawing.Point(489, 202);
             this.playerCard.Name = "playerCard";
             this.playerCard.Size = new System.Drawing.Size(222, 323);
@@ -174,6 +207,8 @@
             // dealerCard
             // 
             this.dealerCard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dealerCard.BackColor = System.Drawing.Color.White;
+            this.dealerCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dealerCard.Location = new System.Drawing.Point(827, 202);
             this.dealerCard.Name = "dealerCard";
             this.dealerCard.Size = new System.Drawing.Size(222, 323);
@@ -184,82 +219,106 @@
             // pWar1
             // 
             this.pWar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pWar1.Location = new System.Drawing.Point(52, 114);
+            this.pWar1.BackColor = System.Drawing.Color.White;
+            this.pWar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pWar1.Location = new System.Drawing.Point(12, 404);
             this.pWar1.Name = "pWar1";
             this.pWar1.Size = new System.Drawing.Size(222, 323);
             this.pWar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pWar1.TabIndex = 5;
             this.pWar1.TabStop = false;
+            this.pWar1.Visible = false;
             // 
             // pWar2
             // 
             this.pWar2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pWar2.Location = new System.Drawing.Point(52, 157);
+            this.pWar2.BackColor = System.Drawing.Color.White;
+            this.pWar2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pWar2.Location = new System.Drawing.Point(52, 327);
             this.pWar2.Name = "pWar2";
             this.pWar2.Size = new System.Drawing.Size(222, 323);
             this.pWar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pWar2.TabIndex = 6;
             this.pWar2.TabStop = false;
+            this.pWar2.Visible = false;
             // 
             // pWar3
             // 
             this.pWar3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pWar3.Location = new System.Drawing.Point(52, 202);
+            this.pWar3.BackColor = System.Drawing.Color.White;
+            this.pWar3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pWar3.Location = new System.Drawing.Point(105, 248);
             this.pWar3.Name = "pWar3";
             this.pWar3.Size = new System.Drawing.Size(222, 323);
             this.pWar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pWar3.TabIndex = 7;
             this.pWar3.TabStop = false;
+            this.pWar3.Visible = false;
             // 
             // pWarBattle
             // 
             this.pWarBattle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pWarBattle.Location = new System.Drawing.Point(52, 248);
+            this.pWarBattle.BackColor = System.Drawing.Color.White;
+            this.pWarBattle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pWarBattle.Location = new System.Drawing.Point(164, 157);
             this.pWarBattle.Name = "pWarBattle";
             this.pWarBattle.Size = new System.Drawing.Size(222, 323);
             this.pWarBattle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pWarBattle.TabIndex = 8;
             this.pWarBattle.TabStop = false;
+            this.pWarBattle.Visible = false;
             // 
             // dWar1
             // 
             this.dWar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dWar1.Location = new System.Drawing.Point(1290, 114);
+            this.dWar1.BackColor = System.Drawing.Color.White;
+            this.dWar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dWar1.Location = new System.Drawing.Point(1350, 404);
             this.dWar1.Name = "dWar1";
             this.dWar1.Size = new System.Drawing.Size(222, 323);
             this.dWar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dWar1.TabIndex = 9;
             this.dWar1.TabStop = false;
+            this.dWar1.Visible = false;
             // 
             // dWar2
             // 
             this.dWar2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dWar2.Location = new System.Drawing.Point(1290, 157);
+            this.dWar2.BackColor = System.Drawing.Color.White;
+            this.dWar2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dWar2.Location = new System.Drawing.Point(1312, 327);
             this.dWar2.Name = "dWar2";
             this.dWar2.Size = new System.Drawing.Size(222, 323);
             this.dWar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dWar2.TabIndex = 10;
             this.dWar2.TabStop = false;
+            this.dWar2.Visible = false;
             // 
             // dWar3
             // 
             this.dWar3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dWar3.Location = new System.Drawing.Point(1290, 202);
+            this.dWar3.BackColor = System.Drawing.Color.White;
+            this.dWar3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dWar3.Location = new System.Drawing.Point(1248, 248);
             this.dWar3.Name = "dWar3";
             this.dWar3.Size = new System.Drawing.Size(222, 323);
             this.dWar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dWar3.TabIndex = 11;
             this.dWar3.TabStop = false;
+            this.dWar3.Visible = false;
             // 
             // dWarBattle
             // 
             this.dWarBattle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dWarBattle.Location = new System.Drawing.Point(1290, 248);
+            this.dWarBattle.BackColor = System.Drawing.Color.White;
+            this.dWarBattle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dWarBattle.Location = new System.Drawing.Point(1179, 157);
             this.dWarBattle.Name = "dWarBattle";
             this.dWarBattle.Size = new System.Drawing.Size(222, 323);
             this.dWarBattle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dWarBattle.TabIndex = 12;
             this.dWarBattle.TabStop = false;
+            this.dWarBattle.Visible = false;
             // 
             // btnBattle
             // 
@@ -285,33 +344,23 @@
             this.titleLabel.TabIndex = 14;
             this.titleLabel.Text = "WAR";
             // 
-            // goldenFlowerToolStripMenuItem
+            // label1
             // 
-            this.goldenFlowerToolStripMenuItem.Name = "goldenFlowerToolStripMenuItem";
-            this.goldenFlowerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.goldenFlowerToolStripMenuItem.Text = "Golden Flower";
-            this.goldenFlowerToolStripMenuItem.Click += new System.EventHandler(this.goldenFlowerToolStripMenuItem_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(536, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 32);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Player:";
             // 
-            // owlsToolStripMenuItem
+            // label2
             // 
-            this.owlsToolStripMenuItem.Name = "owlsToolStripMenuItem";
-            this.owlsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.owlsToolStripMenuItem.Text = "Owls";
-            this.owlsToolStripMenuItem.Click += new System.EventHandler(this.owlsToolStripMenuItem_Click);
-            // 
-            // snakesToolStripMenuItem
-            // 
-            this.snakesToolStripMenuItem.Name = "snakesToolStripMenuItem";
-            this.snakesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.snakesToolStripMenuItem.Text = "Snakes";
-            this.snakesToolStripMenuItem.Click += new System.EventHandler(this.snakesToolStripMenuItem_Click);
-            // 
-            // redSnakesToolStripMenuItem
-            // 
-            this.redSnakesToolStripMenuItem.Name = "redSnakesToolStripMenuItem";
-            this.redSnakesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.redSnakesToolStripMenuItem.Text = "Red Snakes";
-            this.redSnakesToolStripMenuItem.Click += new System.EventHandler(this.redSnakesToolStripMenuItem_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(880, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 32);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Dealer:";
             // 
             // War
             // 
@@ -319,6 +368,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.btnBattle);
             this.Controls.Add(this.dWarBattle);
@@ -386,5 +437,7 @@
         private System.Windows.Forms.ToolStripMenuItem owlsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem snakesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redSnakesToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

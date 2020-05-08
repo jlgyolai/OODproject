@@ -46,33 +46,129 @@ namespace Object_Oriented_Design_Project
         //depending on the card, the proper image.png is returned for the card's front
         public Image cardFront()
         {
-            const string Name_0 = @"Object Oriented Design Project.Images.";
-            string Name_1 = Face switch
+            switch (Face)
             {
-                1 => "ace",
-                11 => "jack",
-                12 => "queen",
-                13 => "king",
-                _ => Face.ToString(),
-            };
-            const string Name_2 = "_of_";
-            string Name_3 = Suit switch
-            {
-                0 => "hearts",
-                1 => "diamonds",
-                2 => "spades",
-                _ => "clubs",
-            };
-            const string Name_4 = ".png";
-            string filename = string.Concat(Name_0, Name_1, Name_2, Name_3, Name_4);
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            Image ReturnVal;
-            Size size = new Size(222, 323);
-            using (Stream stream = assembly.GetManifestResourceStream(filename))
-            {
-                ReturnVal = (Image)new Bitmap(Image.FromStream(stream), size);
+                case 1:
+                    if (Suit == 0)
+                        return Properties.Resources.ace_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources.ace_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources.ace_of_spades;
+                    else
+                        return Properties.Resources.ace_of_clubs;
+                case 2:
+                    if (Suit == 0)
+                        return Properties.Resources._2_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._2_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._2_of_spades;
+                    else
+                        return Properties.Resources._2_of_clubs;
+                case 3:
+                    if (Suit == 0)
+                        return Properties.Resources._3_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._3_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._3_of_spades;
+                    else
+                        return Properties.Resources._3_of_clubs;
+                case 4:
+                    if (Suit == 0)
+                        return Properties.Resources._4_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._4_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._4_of_spades;
+                    else
+                        return Properties.Resources._4_of_clubs;
+                case 5:
+                    if (Suit == 0)
+                        return Properties.Resources._5_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._5_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._5_of_spades;
+                    else
+                        return Properties.Resources._5_of_clubs;
+                case 6:
+                    if (Suit == 0)
+                        return Properties.Resources._6_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._6_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._6_of_spades;
+                    else
+                        return Properties.Resources._6_of_clubs;
+                case 7:
+                    if (Suit == 0)
+                        return Properties.Resources._7_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._7_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._7_of_spades;
+                    else
+                        return Properties.Resources._7_of_clubs;
+                case 8:
+                    if (Suit == 0)
+                        return Properties.Resources._8_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._8_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._8_of_spades;
+                    else
+                        return Properties.Resources._8_of_clubs;
+                case 9:
+                    if (Suit == 0)
+                        return Properties.Resources._9_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._9_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._9_of_spades;
+                    else
+                        return Properties.Resources._9_of_clubs;
+                case 10:
+                    if (Suit == 0)
+                        return Properties.Resources._10_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources._10_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources._10_of_spades;
+                    else
+                        return Properties.Resources._10_of_clubs;
+                case 11:
+                    if (Suit == 0)
+                        return Properties.Resources.jack_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources.jack_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources.jack_of_spades;
+                    else
+                        return Properties.Resources.jack_of_clubs;
+                case 12:
+                    if (Suit == 0)
+                        return Properties.Resources.queen_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources.queen_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources.queen_of_spades;
+                    else
+                        return Properties.Resources.queen_of_clubs;
+                case 13:
+                    if (Suit == 0)
+                        return Properties.Resources.king_of_hearts;
+                    else if (Suit == 1)
+                        return Properties.Resources.king_of_diamonds;
+                    else if (Suit == 2)
+                        return Properties.Resources.king_of_spades;
+                    else
+                        return Properties.Resources.king_of_clubs;
+                default:
+                    Console.WriteLine("Error: Card face value out of range.");
+                    return Properties.Resources.back;
             }
-            return ReturnVal;
 
         }
 

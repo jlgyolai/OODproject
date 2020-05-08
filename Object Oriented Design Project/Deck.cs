@@ -45,11 +45,5 @@ namespace Object_Oriented_Design_Project
             return shuffledDeck;
         }
 
-        public Card drawCard()
-        {
-            Card card = (Card)shuffledCards.Take(1).Single();
-            shuffledCards.Remove(card);
-            return card;
-        }
     }
 } 
